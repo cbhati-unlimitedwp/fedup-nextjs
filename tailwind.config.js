@@ -1,18 +1,107 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/**/*.{js,ts,jsx,tsx,mdx}",
+    "./node_modules/tw-elements/dist/js/**/*.js",
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+      fontFamily: {
+        'titilliumweb': ['var(--titilliumweb)', 'sans-serif']
+      },
+      colors: {
+        primary: '#7ED32D',
+        'light-green': '#7ED32D',
+        basecolor: '#6D6461',
+        'dark-1': '#333333',
+        'dark-2': '#26272B',
+        'gray-1' : '#E2E2E2',
+        'gray-2' : '#CCC9C8',
+        'gray-3' : '#F5F5F5'
       },
     },
+   
+    screens: {
+      'sm': '576px',
+      'md': '768px',
+      'lg': '1024px',
+      'xl': '1200px',
+      '2xl': '1360px',
+      '3xl': '1560px',
+
+      'max-3xl': {'max': '1559px'},
+      'max-2xl': {'max': '1359px'},
+      'max-xl': {'max': '1199px'},
+      'max-lg': {'max': '1023px'},
+      'max-md': {'max': '767px'},
+      'max-sm': {'max': '575px'},
+    },
+    container: {
+        padding: {
+            DEFAULT: '15px',
+        },
+        screens: {
+            'sm': '576px',
+            'md': '768px',
+            'lg': '1024px',
+            'xl': '1200px',
+            '2xl': '1360px',
+            '3xl': '1540px',
+        },
+    },
+    fontSize: {
+      'font-14': ['0.875rem', {
+        lineHeight: '1.55',
+      }],
+      'font-16': ['1rem', {
+        lineHeight: '1.55',
+      }],
+      'font-18': ['1.125rem', {
+        lineHeight: '1.55',
+      }],
+      'font-20': ['1.25rem', {
+        lineHeight: '1.5',
+      }],
+      'font-22': ['1.375rem', {
+        lineHeight: '1.5',
+      }],
+      'font-24': ['1.5rem', {
+        lineHeight: '1.3',
+      }],
+      'font-26': ['1.625rem', {
+        lineHeight: '1.2',
+      }],
+      'font-28': ['1.75rem', {
+        lineHeight: '1.2',
+      }],
+      'font-30': ['1.875rem', {
+        lineHeight: '1.2',
+      }],
+      'font-32': ['2rem', {
+        lineHeight: '1.2',
+      }],
+      'font-34': ['2.125rem', {
+        lineHeight: '1.2',
+      }],
+      'font-36': ['2.25rem', {
+        lineHeight: '1.2',
+      }],
+      'font-38': ['2.375rem', {
+        lineHeight: '1.2',
+      }],
+      'font-40': ['2.5rem', {
+        lineHeight: '1.2',
+      }],
+      'font-44': ['2.75rem', {
+        lineHeight: '1.2',
+      }],
+      'font-48': ['3rem', {
+        lineHeight: '1.2',
+      }],
+      'font-52': ['3.25rem', {
+        lineHeight: '1.2',
+      }],
+    }, 
   },
   plugins: [],
 };

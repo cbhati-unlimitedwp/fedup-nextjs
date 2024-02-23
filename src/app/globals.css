@@ -1,33 +1,41 @@
+@import "../../node_modules/tw-elements/dist/css/tw-elements.min.css";
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
-
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-}
-
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+@layer base{
+    html{
+        @apply font-titilliumweb;
+    }
+    body {
+        @apply font-titilliumweb text-font-16 font-medium text-black;
+    }
+    h1, .h1{
+        @apply text-font-28 lg:text-font-36 xl:text-font-44 text-black font-bold;
+    }
+    h2, .h2{
+        @apply text-font-24 lg:text-font-30 xl:text-font-38 text-black font-bold;
+    }
+    h3, .h3{
+        @apply text-font-20 lg:text-font-28 xl:text-font-34 text-black font-medium;
+    }
+    h4, .h4{
+        @apply text-font-18 lg:text-font-24 xl:text-font-26 text-black font-medium;
+    }
+    h5, .h5{
+        @apply text-font-16 lg:text-font-20 xl:text-font-24 text-black font-bold;
+    }
+    a{
+        @apply transition delay-150;
+    }
+    .btn{
+        @apply inline-block text-center rounded-none px-6 py-[11px] lg:py-4 text-font-14 lg:text-font-16 font-bold border-[2px] border-solid border-transparent leading-6 transition duration-150 ease-in-out focus:ring-0;
+    }
+    .btn-sm{
+        @apply px-3 py-1.5 lg:py-2 lg:px-4 text-font-14 lg:text-font-16;
+    }
+    .btn-green{
+        @apply bg-light-green text-white hover:bg-lime-600 focus:bg-lime-600 active:bg-lime-600;
+    } 
 }
