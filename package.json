@@ -9,7 +9,10 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@tailwindcss/nesting": "^0.0.0-insiders.565cd3e",
     "next": "14.1.0",
+    "postcss-import": "^16.0.1",
+    "postcss-nested": "^6.0.1",
     "postcss-nesting": "^12.0.3",
     "react": "^18",
     "react-dom": "^18",

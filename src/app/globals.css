@@ -30,12 +30,99 @@
         @apply transition delay-150;
     }
     .btn{
-        @apply inline-block text-center rounded-none px-6 py-[11px] lg:py-4 text-font-14 lg:text-font-16 font-bold border-[2px] border-solid border-transparent leading-6 transition duration-150 ease-in-out focus:ring-0;
+        @apply inline-block text-center rounded-custom px-6 py-[11px] lg:py-4 text-font-14 lg:text-font-16 font-bold border-[2px] border-solid border-transparent leading-6 transition duration-150 ease-in-out focus:ring-0;
     }
     .btn-sm{
-        @apply px-3 py-1.5 lg:py-2 lg:px-4 text-font-14 lg:text-font-16;
+        @apply px-3 py-1.5 lg:py-[7px] lg:px-6 text-font-14 font-semibold leading-none;
     }
     .btn-green{
         @apply bg-light-green text-white hover:bg-lime-600 focus:bg-lime-600 active:bg-lime-600;
     } 
+}
+
+.default-content{
+    @apply text-font-16 leading-normal;
+    p, ul, li, ol, a:not(.btn), span{
+        @apply text-font-16 leading-normal;
+        > a:not(.btn){
+            @apply text-basecolor underline hover:text-basecolor/80;
+        }
+    }
+    strong, b{
+        @apply font-bold;
+    }
+	ul{
+        @apply text-left pl-5 list-disc mb-[15px] mt-[15px] first:mt-0 last:mb-0;
+        li {
+            @apply mb-3 last:mb-0;
+        }
+    }
+    ol{
+        counter-reset: li;
+
+        @apply text-left p-0 mx-0 mb-[15px] mt-[15px] first:mt-0 last:mb-0;
+        > li{
+            @apply relative list-inside pl-[30px] mb-3 last:mb-0;
+            &::marker{
+                display: none;
+                content: none;
+            }
+            &:before {
+                content: counters(li, '.') '. ';
+                counter-increment: li;
+                @apply absolute left-0 top-0;
+            }
+        }
+    }
+    blockquote{     
+    }
+	a:not(.btn){
+		@apply text-basecolor underline hover:text-basecolor/80;
+	}
+    .btn {
+        @apply mt-2.5;
+        + .btn{
+            @apply ml-2.5;
+        }
+    }
+    p{
+        + p{
+            @apply mt-5 lg:mt-[25px];
+        }
+        &:empty, &.empty-tag{
+            @apply hidden;
+        }
+    }
+    p + .btn{
+        @apply mt-2.5;
+    }
+	h1, h2, h3, h4, h5, h6{
+		@apply text-black mb-[15px] mt-[15px] lg:mt-[25px] first:mt-0 last:mb-0;
+        > span, > a:not(.btn){
+            font-size: inherit;
+            line-height: inherit;
+        }
+        > span{
+            color: inherit;
+        }
+	}
+    h2{
+        @apply mb-[15px] mt-5 lg:mt-[25px] first:mt-0 last:mb-0;
+    }
+    table{
+        @apply border-gray-1 w-full border-collapse mb-[15px] mt-[15px] first:mt-0 last:mb-0;
+        & >:not(caption)>* {
+            @apply border-y border-x-0 border-gray-1;
+            >* {
+                @apply border p-2 border-gray-1;
+            }
+        }
+        
+    }
+    &.default-content-sm{
+        @apply text-font-14 leading-relaxed;
+        p, ul, li, ol, a:not(.btn), span{
+            @apply text-font-14 leading-relaxed;
+        }
+    }
 }

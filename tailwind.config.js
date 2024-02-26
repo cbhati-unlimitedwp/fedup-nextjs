@@ -19,6 +19,9 @@ module.exports = {
         'gray-2' : '#CCC9C8',
         'gray-3' : '#F5F5F5'
       },
+      boxShadow: {
+        'custom-1': '0 0 4px 0 rgba(0, 0, 0, 0.05)',
+      }
     },
    
     screens: {
@@ -102,6 +105,17 @@ module.exports = {
         lineHeight: '1.2',
       }],
     }, 
+    borderRadius: {
+      'none': '0',
+      'sm': '0.125rem',
+      DEFAULT: '0.25rem',
+      DEFAULT: '4px',
+      'md': '0.375rem',
+      'lg': '0.5rem',
+      'full': '9999px',
+      'large': '12px',
+      'custom': '5px',
+    }
   },
   plugins: [],
 };
