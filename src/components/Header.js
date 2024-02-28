@@ -110,36 +110,36 @@ const Header = () => {
                                 <ul className="list-style-none flex flex-col pl-0 *:pb-4"
                                     data-te-navbar-nav-ref>
                                     <li className="lg:hidden">
-                                        <a className="text-font-16 lg:text-font-20 font-semibold text-primary transition duration-200 hover:text-primary hover:underline hover:ease-in-out focus:text-primary motion-reduce:transition-none [&.active]:text-white"
+                                        <a className="text-font-16 lg:text-font-20 font-semibold text-light-green transition duration-200 hover:text-light-green hover:underline hover:ease-in-out focus:text-light-green motion-reduce:transition-none [&.active]:text-white"
                                         href="#" >Order Now</a>
                                     </li>
                                     
                                     <li className="">
-                                        <a className="text-font-16 lg:text-font-20 font-semibold text-primary transition duration-200 hover:text-primary hover:underline hover:ease-in-out focus:text-primary motion-reduce:transition-none [&.active]:text-white"
+                                        <a className="text-font-16 lg:text-font-20 font-semibold text-light-green transition duration-200 hover:text-light-green hover:underline hover:ease-in-out focus:text-light-green motion-reduce:transition-none [&.active]:text-white"
                                         href="#" >Contact</a>
                                     </li>
                                     <li className="">
-                                        <a className="text-font-16 lg:text-font-20 font-semibold text-primary transition duration-200 hover:text-primary hover:underline hover:ease-in-out focus:text-primary motion-reduce:transition-none [&.active]:text-white"
+                                        <a className="text-font-16 lg:text-font-20 font-semibold text-light-green transition duration-200 hover:text-light-green hover:underline hover:ease-in-out focus:text-light-green motion-reduce:transition-none [&.active]:text-white"
                                         href="#" >FAQ</a>
                                     </li>
                                     <li className="">
-                                        <a className="text-font-16 lg:text-font-20 font-semibold text-primary transition duration-200 hover:text-primary hover:underline hover:ease-in-out focus:text-primary motion-reduce:transition-none [&.active]:text-white"
+                                        <a className="text-font-16 lg:text-font-20 font-semibold text-light-green transition duration-200 hover:text-light-green hover:underline hover:ease-in-out focus:text-light-green motion-reduce:transition-none [&.active]:text-white"
                                         href="#" >This Week&lsquo;s Menu</a>
                                     </li>
                                     <hr className="my-2 h-[1px] !p-0 bg-gray-1 opacity-20 " />
                                     <li className="mt-4">
-                                        <a className="text-font-16 lg:text-font-20 font-semibold text-primary transition duration-200 hover:text-primary hover:underline hover:ease-in-out focus:text-primary motion-reduce:transition-none [&.active]:text-white"
+                                        <a className="text-font-16 lg:text-font-20 font-semibold text-light-green transition duration-200 hover:text-light-green hover:underline hover:ease-in-out focus:text-light-green motion-reduce:transition-none [&.active]:text-white"
                                         href="#" >Sign in</a>
                                     </li>
                                     <li className="">
-                                        <a className="text-font-16 lg:text-font-20 font-semibold text-primary transition duration-200 hover:text-primary hover:underline hover:ease-in-out focus:text-primary motion-reduce:transition-none [&.active]:text-white"
+                                        <a className="text-font-16 lg:text-font-20 font-semibold text-light-green transition duration-200 hover:text-light-green hover:underline hover:ease-in-out focus:text-light-green motion-reduce:transition-none [&.active]:text-white"
                                         href="#" >Sign up</a>
                                     </li>
                                 </ul>
                             </nav>
                         </div>
                         <div className='mt-auto'>
-                            <a className="btn btn-green btn-md leading-none w-full" href="#" data-te-nav-link-ref >Try us for free</a>
+                            <a className="btn btn-green btn-md leading-none w-full py-3" href="#" data-te-nav-link-ref >Try us for free</a>
                         </div>
                     </div>
                 </div>

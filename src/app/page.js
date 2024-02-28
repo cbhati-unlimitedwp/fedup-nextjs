@@ -66,23 +66,23 @@ export default function Home() {
               {/* Meal Heading Option start*/}
               <div className="bg-white p-5 rounded-custom shadow-custom-1 mt-5 grid grid-cols-2 md:grid-cols-4 gap-5 xl:gap-[30px]">
                 <div className="meal-image-wrap relative">
-                    <Link href="#">
+                    <Link href="/variety-packs">
                         <div className="image-wrap overflow-hidden border border-solid border-gray-1 rounded-custom relative w-full pt-[99.443%]">
                           <Image src={Thumb1} alt="Meal Program" className="w-full h-full absolute top-0 left-0 right-0 bottom-0 object-cover border border-solid border-gray-1 rounded-custom" />
                         </div>
                     </Link>
                     <h2 className="text-font-18 mt-[15px]">
-                      <Link href="#">Variety Packs</Link>
+                      <Link href="/variety-packs">Variety Packs</Link>
                     </h2>
                   </div>
                   <div className="meal-image-wrap relative">
-                    <Link href="#">
+                    <Link href="/meal-programs">
                         <div className="image-wrap overflow-hidden border border-solid border-gray-1 rounded-custom relative w-full pt-[99.443%]">
                           <Image src={Thumb2} alt="Meal Program" className="w-full h-full absolute top-0 left-0 right-0 bottom-0 object-cover border border-solid border-gray-1 rounded-custom" />
                         </div>
                     </Link>
                     <h2 className="text-font-18 mt-[15px]">
-                      <Link href="#">Meal Programs</Link>
+                      <Link href="/meal-programs">Meal Programs</Link>
                     </h2>
                   </div>
               </div>

@@ -52,6 +52,9 @@ module.exports = {
         },
     },
     fontSize: {
+      'font-12': ['0.75rem', {
+        lineHeight: '1.55',
+      }],
       'font-14': ['0.875rem', {
         lineHeight: '1.55',
       }],
