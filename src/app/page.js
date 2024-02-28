@@ -40,8 +40,8 @@ export default function Home() {
     <Header />
     <main className="bg-gray-3 py-7">
       <div className="container container-xl mx-auto">
-        <div className="flex">
-            <div className="left-content flex-1 lg:pr-[30px] xl:pr-[45px]">
+        <div className="lg:flex">
+            <div className="left-content flex-1 lg:pr-[30px]">
               {/* Store location and detail start */}
               <div className="bg-white p-5 rounded-custom shadow-custom-1 grid grid-cols-1 lg:grid-cols-2 gap-[15px]">
                   <div className="flex">
@@ -63,25 +63,13 @@ export default function Home() {
               </div>
               {/* Store location and detail End */}
 
-              {/* Meal Heading and Description start*/}
-              <div className="bg-white p-5 rounded-custom shadow-custom-1 mt-5 flex">
-                  <div className="meal-image-wrap relative">
-                    <Image src={Thumb1} alt="Meal Program" className="w-[200px] h-[200px] min-w-[200px] min-h-[200px] object-cover border border-solid border-gray-1 rounded-custom" />
-                  </div>
-                  <div className="flex-1 ml-5 default-content">
-                      <h5 className="text-font-16 lg:text-font-18 mb-[15px]">Meal Programs</h5>
-                      <p>Fed Up Kitchen’s 7-day-a-week program! We take care of everything, so you can achieve the RESULTS you desire. Select from 2-3 meals a day, and enhance your healthy journey with our delicious fresh green smoothies and gluten-free treats. Experience the freshness as you pick up your meals twice a week or opt for convenient delivery. Choose between Monday/Thursday or Tuesday/Friday pickup schedules.</p>
-                      <p className="font-semibold">Delivery options available during checkout!</p>
-
-                  </div>
-              </div>
-              {/* Meal Heading and Description End*/}
-
               {/* Meal Heading Option start*/}
-              <div className="bg-white p-5 rounded-custom shadow-custom-1 mt-5 flex gap-[30px]">
+              <div className="bg-white p-5 rounded-custom shadow-custom-1 mt-5 grid grid-cols-2 md:grid-cols-4 gap-5 xl:gap-[30px]">
                 <div className="meal-image-wrap relative">
                     <Link href="#">
-                        <Image src={Thumb1} alt="Meal Program" className="w-[200px] h-[200px] min-w-[200px] min-h-[200px] object-cover border border-solid border-gray-1 rounded-custom" />
+                        <div className="image-wrap overflow-hidden border border-solid border-gray-1 rounded-custom relative w-full pt-[99.443%]">
+                          <Image src={Thumb1} alt="Meal Program" className="w-full h-full absolute top-0 left-0 right-0 bottom-0 object-cover border border-solid border-gray-1 rounded-custom" />
+                        </div>
                     </Link>
                     <h2 className="text-font-18 mt-[15px]">
                       <Link href="#">Variety Packs</Link>
@@ -89,7 +77,9 @@ export default function Home() {
                   </div>
                   <div className="meal-image-wrap relative">
                     <Link href="#">
-                        <Image src={Thumb2} alt="Meal Program" className="w-[200px] h-[200px] min-w-[200px] min-h-[200px] object-cover border border-solid border-gray-1 rounded-custom" />
+                        <div className="image-wrap overflow-hidden border border-solid border-gray-1 rounded-custom relative w-full pt-[99.443%]">
+                          <Image src={Thumb2} alt="Meal Program" className="w-full h-full absolute top-0 left-0 right-0 bottom-0 object-cover border border-solid border-gray-1 rounded-custom" />
+                        </div>
                     </Link>
                     <h2 className="text-font-18 mt-[15px]">
                       <Link href="#">Meal Programs</Link>
@@ -117,19 +107,19 @@ export default function Home() {
                   </h2>
                   <div id="mealCollapse1" className="!visible" data-te-collapse-item data-te-collapse-show aria-labelledby="mealCollapseHeading1">
                     <div className="pb-5 px-4 pt-0">
-                      <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+                      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2 gap-5">
                         {/* Product card start*/}
-                        <div className="bg-white p-5 rounded-custom border border-solid border-basecolor/20 flex">
+                        <div className="bg-white p-5 rounded-custom border border-solid border-basecolor/20 md:flex">
                             <div className="meal-image-wrap relative">
-                              <Image src={Thumb1} alt="Meal Program" className="w-[130px] h-[130px] min-w-[130px] min-h-[130px] object-cover border border-solid border-gray-1 rounded-custom" />
+                              <Image src={Thumb1} alt="Meal Program" className="w-full h-[150px] min-w-full min-h-[150px] sm:w-full sm:h-[220px] sm:min-w-full sm:min-h-[220px] md:w-[70px] md:h-[70px] md:min-w-[70px] md:min-h-[70px] lg:w-[130px] lg:h-[130px] lg:min-w-[130px] lg:min-h-[130px] xl:w-[90px] xl:h-[90px] xl:min-w-[90px] xl:min-h-[90px] 2xl:w-[130px] 2xl:h-[130px] 2xl:min-w-[130px] 2xl:min-h-[130px] object-cover border border-solid border-gray-1 rounded-custom" />
                             </div>
-                            <div className="flex-1 ml-[15px] flex flex-col">
+                            <div className="flex-1 md:ml-[15px] mt-3 md:mt-0 flex flex-col">
                               <div className="flex justify-between mb-4">
                                   <div className="flex-1">
                                     <h5 className="text-font-16 text-dark-1 font-semibold">Banana Nut Muffins</h5>
                                     <p className="text-font-14 text-basecolor">(6) count</p>
                                   </div>
-                                  <div className="ml-5 w-[90px]">
+                                  <div className="ml-5 w-[70px] text-right">
                                     <p className="text-font-16 text-dark-1 font-bold">$13.99</p>
                                   </div>
                               </div>
@@ -148,7 +138,7 @@ export default function Home() {
                                       </button>
                                   </div>
                                   <div className="ml-5">
-                                      <Link href="#" className="btn btn-green btn-sm" data-te-ripple-init>Add to Cart</Link>
+                                      <Link href="#" className="btn btn-green btn-sm xl:px-3 2xl:px-6" data-te-ripple-init>Add to Cart</Link>
                                   </div>
                               </div>  
                             </div>
@@ -156,17 +146,17 @@ export default function Home() {
                         {/* Product card End*/}
 
                         {/* Product card start*/}
-                        <div className="bg-white p-5 rounded-custom border border-solid border-basecolor/20 flex">
+                        <div className="bg-white p-5 rounded-custom border border-solid border-basecolor/20 md:flex">
                             <div className="meal-image-wrap relative">
-                              <Image src={Thumb1} alt="Meal Program" className="w-[130px] h-[130px] min-w-[130px] min-h-[130px] object-cover border border-solid border-gray-1 rounded-custom" />
+                              <Image src={Thumb1} alt="Meal Program" className="w-full h-[150px] min-w-full min-h-[150px] sm:w-full sm:h-[220px] sm:min-w-full sm:min-h-[220px] md:w-[70px] md:h-[70px] md:min-w-[70px] md:min-h-[70px] lg:w-[130px] lg:h-[130px] lg:min-w-[130px] lg:min-h-[130px] xl:w-[90px] xl:h-[90px] xl:min-w-[90px] xl:min-h-[90px] 2xl:w-[130px] 2xl:h-[130px] 2xl:min-w-[130px] 2xl:min-h-[130px] object-cover border border-solid border-gray-1 rounded-custom" />
                             </div>
-                            <div className="flex-1 ml-[15px] flex flex-col">
+                            <div className="flex-1 md:ml-[15px] mt-3 md:mt-0 flex flex-col">
                               <div className="flex justify-between mb-4">
                                   <div className="flex-1">
                                     <h5 className="text-font-16 text-dark-1 font-semibold">1 Dozen Zucchini Muffins</h5>
                                     <p className="text-font-14 text-basecolor">(12) Count Zucchini Muffins</p>
                                   </div>
-                                  <div className="ml-5 w-[90px]">
+                                  <div className="ml-5 w-[70px] text-right">
                                     <p className="text-font-16 text-dark-1 font-bold">$13.99</p>
                                   </div>
                               </div>
@@ -185,7 +175,7 @@ export default function Home() {
                                       </button>
                                   </div>
                                   <div className="ml-5">
-                                      <Link href="#" className="btn btn-green btn-sm" data-te-ripple-init>Add to Cart</Link>
+                                      <Link href="#" className="btn btn-green btn-sm xl:px-3 2xl:px-6" data-te-ripple-init>Add to Cart</Link>
                                   </div>
                               </div>  
                             </div>
@@ -193,17 +183,17 @@ export default function Home() {
                         {/* Product card End*/}
 
                         {/* Product card start*/}
-                        <div className="bg-white p-5 rounded-custom border border-solid border-basecolor/20 flex">
+                        <div className="bg-white p-5 rounded-custom border border-solid border-basecolor/20 md:flex">
                             <div className="meal-image-wrap relative">
-                              <Image src={Thumb1} alt="Meal Program" className="w-[130px] h-[130px] min-w-[130px] min-h-[130px] object-cover border border-solid border-gray-1 rounded-custom" />
+                              <Image src={Thumb1} alt="Meal Program" className="w-full h-[150px] min-w-full min-h-[150px] sm:w-full sm:h-[220px] sm:min-w-full sm:min-h-[220px] md:w-[70px] md:h-[70px] md:min-w-[70px] md:min-h-[70px] lg:w-[130px] lg:h-[130px] lg:min-w-[130px] lg:min-h-[130px] xl:w-[90px] xl:h-[90px] xl:min-w-[90px] xl:min-h-[90px] 2xl:w-[130px] 2xl:h-[130px] 2xl:min-w-[130px] 2xl:min-h-[130px] object-cover border border-solid border-gray-1 rounded-custom" />
                             </div>
-                            <div className="flex-1 ml-[15px] flex flex-col">
+                            <div className="flex-1 md:ml-[15px] mt-3 md:mt-0 flex flex-col">
                               <div className="flex justify-between mb-4">
                                   <div className="flex-1">
                                     <h5 className="text-font-16 text-dark-1 font-semibold">Banana Nut Muffins</h5>
                                     <p className="text-font-14 text-basecolor">(12) count Banana Nut Muffins 3g P / 3g F / 14g C</p>
                                   </div>
-                                  <div className="ml-5 w-[90px]">
+                                  <div className="ml-5 w-[70px] text-right">
                                     <p className="text-font-16 text-dark-1 font-bold">$13.99</p>
                                   </div>
                               </div>
@@ -222,7 +212,7 @@ export default function Home() {
                                       </button>
                                   </div>
                                   <div className="ml-5">
-                                      <Link href="#" className="btn btn-green btn-sm" data-te-ripple-init>Add to Cart</Link>
+                                      <Link href="#" className="btn btn-green btn-sm xl:px-3 2xl:px-6" data-te-ripple-init>Add to Cart</Link>
                                   </div>
                               </div>  
                             </div>
@@ -230,17 +220,17 @@ export default function Home() {
                         {/* Product card End*/}
 
                         {/* Product card start*/}
-                        <div className="bg-white p-5 rounded-custom border border-solid border-basecolor/20 flex">
+                        <div className="bg-white p-5 rounded-custom border border-solid border-basecolor/20 md:flex">
                             <div className="meal-image-wrap relative">
-                              <Image src={Thumb1} alt="Meal Program" className="w-[130px] h-[130px] min-w-[130px] min-h-[130px] object-cover border border-solid border-gray-1 rounded-custom" />
+                              <Image src={Thumb1} alt="Meal Program" className="w-full h-[150px] min-w-full min-h-[150px] sm:w-full sm:h-[220px] sm:min-w-full sm:min-h-[220px] md:w-[70px] md:h-[70px] md:min-w-[70px] md:min-h-[70px] lg:w-[130px] lg:h-[130px] lg:min-w-[130px] lg:min-h-[130px] xl:w-[90px] xl:h-[90px] xl:min-w-[90px] xl:min-h-[90px] 2xl:w-[130px] 2xl:h-[130px] 2xl:min-w-[130px] 2xl:min-h-[130px] object-cover border border-solid border-gray-1 rounded-custom" />
                             </div>
-                            <div className="flex-1 ml-[15px] flex flex-col">
+                            <div className="flex-1 md:ml-[15px] mt-3 md:mt-0 flex flex-col">
                               <div className="flex justify-between mb-4">
                                   <div className="flex-1">
                                     <h5 className="text-font-16 text-dark-1 font-semibold">1 Dozen Zucchini Muffins</h5>
                                     <p className="text-font-14 text-basecolor">(6) count</p>
                                   </div>
-                                  <div className="ml-5 w-[90px]">
+                                  <div className="ml-5 w-[70px] text-right">
                                     <p className="text-font-16 text-dark-1 font-bold">$13.99</p>
                                   </div>
                               </div>
@@ -259,7 +249,7 @@ export default function Home() {
                                       </button>
                                   </div>
                                   <div className="ml-5">
-                                      <Link href="#" className="btn btn-green btn-sm" data-te-ripple-init>Add to Cart</Link>
+                                      <Link href="#" className="btn btn-green btn-sm xl:px-3 2xl:px-6" data-te-ripple-init>Add to Cart</Link>
                                   </div>
                               </div>  
                             </div>
@@ -291,19 +281,19 @@ export default function Home() {
                   </h2>
                   <div id="mealCollapse2" className="!visible" data-te-collapse-item aria-labelledby="mealCollapseHeading2">
                   <div className="pb-5 px-4 pt-0">
-                      <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+                      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2 gap-5">
                         {/* Product card start*/}
-                        <div className="bg-white p-5 rounded-custom border border-solid border-basecolor/20 flex">
+                        <div className="bg-white p-5 rounded-custom border border-solid border-basecolor/20 md:flex">
                             <div className="meal-image-wrap relative">
-                              <Image src={Thumb1} alt="Meal Program" className="w-[130px] h-[130px] min-w-[130px] min-h-[130px] object-cover border border-solid border-gray-1 rounded-custom" />
+                              <Image src={Thumb1} alt="Meal Program" className="w-full h-[150px] min-w-full min-h-[150px] sm:w-full sm:h-[220px] sm:min-w-full sm:min-h-[220px] md:w-[70px] md:h-[70px] md:min-w-[70px] md:min-h-[70px] lg:w-[130px] lg:h-[130px] lg:min-w-[130px] lg:min-h-[130px] xl:w-[90px] xl:h-[90px] xl:min-w-[90px] xl:min-h-[90px] 2xl:w-[130px] 2xl:h-[130px] 2xl:min-w-[130px] 2xl:min-h-[130px] object-cover border border-solid border-gray-1 rounded-custom" />
                             </div>
-                            <div className="flex-1 ml-[15px] flex flex-col">
+                            <div className="flex-1 md:ml-[15px] mt-3 md:mt-0 flex flex-col">
                               <div className="flex justify-between mb-4">
                                   <div className="flex-1">
                                     <h5 className="text-font-16 text-dark-1 font-semibold">Banana Nut Muffins</h5>
                                     <p className="text-font-14 text-basecolor">(6) count</p>
                                   </div>
-                                  <div className="ml-5 w-[90px]">
+                                  <div className="ml-5 w-[70px] text-right">
                                     <p className="text-font-16 text-dark-1 font-bold">$13.99</p>
                                   </div>
                               </div>
@@ -322,7 +312,7 @@ export default function Home() {
                                       </button>
                                   </div>
                                   <div className="ml-5">
-                                      <Link href="#" className="btn btn-green btn-sm" data-te-ripple-init>Add to Cart</Link>
+                                      <Link href="#" className="btn btn-green btn-sm xl:px-3 2xl:px-6" data-te-ripple-init>Add to Cart</Link>
                                   </div>
                               </div>  
                             </div>
@@ -330,17 +320,17 @@ export default function Home() {
                         {/* Product card End*/}
 
                         {/* Product card start*/}
-                        <div className="bg-white p-5 rounded-custom border border-solid border-basecolor/20 flex">
+                        <div className="bg-white p-5 rounded-custom border border-solid border-basecolor/20 md:flex">
                             <div className="meal-image-wrap relative">
-                              <Image src={Thumb1} alt="Meal Program" className="w-[130px] h-[130px] min-w-[130px] min-h-[130px] object-cover border border-solid border-gray-1 rounded-custom" />
+                              <Image src={Thumb1} alt="Meal Program" className="w-full h-[150px] min-w-full min-h-[150px] sm:w-full sm:h-[220px] sm:min-w-full sm:min-h-[220px] md:w-[70px] md:h-[70px] md:min-w-[70px] md:min-h-[70px] lg:w-[130px] lg:h-[130px] lg:min-w-[130px] lg:min-h-[130px] xl:w-[90px] xl:h-[90px] xl:min-w-[90px] xl:min-h-[90px] 2xl:w-[130px] 2xl:h-[130px] 2xl:min-w-[130px] 2xl:min-h-[130px] object-cover border border-solid border-gray-1 rounded-custom" />
                             </div>
-                            <div className="flex-1 ml-[15px] flex flex-col">
+                            <div className="flex-1 md:ml-[15px] mt-3 md:mt-0 flex flex-col">
                               <div className="flex justify-between mb-4">
                                   <div className="flex-1">
                                     <h5 className="text-font-16 text-dark-1 font-semibold">1 Dozen Zucchini Muffins</h5>
                                     <p className="text-font-14 text-basecolor">(12) Count Zucchini Muffins</p>
                                   </div>
-                                  <div className="ml-5 w-[90px]">
+                                  <div className="ml-5 w-[70px] text-right">
                                     <p className="text-font-16 text-dark-1 font-bold">$13.99</p>
                                   </div>
                               </div>
@@ -359,7 +349,7 @@ export default function Home() {
                                       </button>
                                   </div>
                                   <div className="ml-5">
-                                      <Link href="#" className="btn btn-green btn-sm" data-te-ripple-init>Add to Cart</Link>
+                                      <Link href="#" className="btn btn-green btn-sm xl:px-3 2xl:px-6" data-te-ripple-init>Add to Cart</Link>
                                   </div>
                               </div>  
                             </div>
@@ -367,17 +357,17 @@ export default function Home() {
                         {/* Product card End*/}
 
                         {/* Product card start*/}
-                        <div className="bg-white p-5 rounded-custom border border-solid border-basecolor/20 flex">
+                        <div className="bg-white p-5 rounded-custom border border-solid border-basecolor/20 md:flex">
                             <div className="meal-image-wrap relative">
-                              <Image src={Thumb1} alt="Meal Program" className="w-[130px] h-[130px] min-w-[130px] min-h-[130px] object-cover border border-solid border-gray-1 rounded-custom" />
+                              <Image src={Thumb1} alt="Meal Program" className="w-full h-[150px] min-w-full min-h-[150px] sm:w-full sm:h-[220px] sm:min-w-full sm:min-h-[220px] md:w-[70px] md:h-[70px] md:min-w-[70px] md:min-h-[70px] lg:w-[130px] lg:h-[130px] lg:min-w-[130px] lg:min-h-[130px] xl:w-[90px] xl:h-[90px] xl:min-w-[90px] xl:min-h-[90px] 2xl:w-[130px] 2xl:h-[130px] 2xl:min-w-[130px] 2xl:min-h-[130px] object-cover border border-solid border-gray-1 rounded-custom" />
                             </div>
-                            <div className="flex-1 ml-[15px] flex flex-col">
+                            <div className="flex-1 md:ml-[15px] mt-3 md:mt-0 flex flex-col">
                               <div className="flex justify-between mb-4">
                                   <div className="flex-1">
                                     <h5 className="text-font-16 text-dark-1 font-semibold">Banana Nut Muffins</h5>
                                     <p className="text-font-14 text-basecolor">(12) count Banana Nut Muffins 3g P / 3g F / 14g C</p>
                                   </div>
-                                  <div className="ml-5 w-[90px]">
+                                  <div className="ml-5 w-[70px] text-right">
                                     <p className="text-font-16 text-dark-1 font-bold">$13.99</p>
                                   </div>
                               </div>
@@ -396,7 +386,7 @@ export default function Home() {
                                       </button>
                                   </div>
                                   <div className="ml-5">
-                                      <Link href="#" className="btn btn-green btn-sm" data-te-ripple-init>Add to Cart</Link>
+                                      <Link href="#" className="btn btn-green btn-sm xl:px-3 2xl:px-6" data-te-ripple-init>Add to Cart</Link>
                                   </div>
                               </div>  
                             </div>
@@ -404,17 +394,17 @@ export default function Home() {
                         {/* Product card End*/}
 
                         {/* Product card start*/}
-                        <div className="bg-white p-5 rounded-custom border border-solid border-basecolor/20 flex">
+                        <div className="bg-white p-5 rounded-custom border border-solid border-basecolor/20 md:flex">
                             <div className="meal-image-wrap relative">
-                              <Image src={Thumb1} alt="Meal Program" className="w-[130px] h-[130px] min-w-[130px] min-h-[130px] object-cover border border-solid border-gray-1 rounded-custom" />
+                              <Image src={Thumb1} alt="Meal Program" className="w-full h-[150px] min-w-full min-h-[150px] sm:w-full sm:h-[220px] sm:min-w-full sm:min-h-[220px] md:w-[70px] md:h-[70px] md:min-w-[70px] md:min-h-[70px] lg:w-[130px] lg:h-[130px] lg:min-w-[130px] lg:min-h-[130px] xl:w-[90px] xl:h-[90px] xl:min-w-[90px] xl:min-h-[90px] 2xl:w-[130px] 2xl:h-[130px] 2xl:min-w-[130px] 2xl:min-h-[130px] object-cover border border-solid border-gray-1 rounded-custom" />
                             </div>
-                            <div className="flex-1 ml-[15px] flex flex-col">
+                            <div className="flex-1 md:ml-[15px] mt-3 md:mt-0 flex flex-col">
                               <div className="flex justify-between mb-4">
                                   <div className="flex-1">
                                     <h5 className="text-font-16 text-dark-1 font-semibold">1 Dozen Zucchini Muffins</h5>
                                     <p className="text-font-14 text-basecolor">(6) count</p>
                                   </div>
-                                  <div className="ml-5 w-[90px]">
+                                  <div className="ml-5 w-[70px] text-right">
                                     <p className="text-font-16 text-dark-1 font-bold">$13.99</p>
                                   </div>
                               </div>
@@ -433,7 +423,7 @@ export default function Home() {
                                       </button>
                                   </div>
                                   <div className="ml-5">
-                                      <Link href="#" className="btn btn-green btn-sm" data-te-ripple-init>Add to Cart</Link>
+                                      <Link href="#" className="btn btn-green btn-sm xl:px-3 2xl:px-6" data-te-ripple-init>Add to Cart</Link>
                                   </div>
                               </div>  
                             </div>
@@ -464,19 +454,19 @@ export default function Home() {
                   </h2>
                   <div id="mealCollapse3" className="!visible" data-te-collapse-item aria-labelledby="mealCollapseHeading3">
                   <div className="pb-5 px-4 pt-0">
-                      <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+                      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2 gap-5">
                         {/* Product card start*/}
-                        <div className="bg-white p-5 rounded-custom border border-solid border-basecolor/20 flex">
+                        <div className="bg-white p-5 rounded-custom border border-solid border-basecolor/20 md:flex">
                             <div className="meal-image-wrap relative">
-                              <Image src={Thumb1} alt="Meal Program" className="w-[130px] h-[130px] min-w-[130px] min-h-[130px] object-cover border border-solid border-gray-1 rounded-custom" />
+                              <Image src={Thumb1} alt="Meal Program" className="w-full h-[150px] min-w-full min-h-[150px] sm:w-full sm:h-[220px] sm:min-w-full sm:min-h-[220px] md:w-[70px] md:h-[70px] md:min-w-[70px] md:min-h-[70px] lg:w-[130px] lg:h-[130px] lg:min-w-[130px] lg:min-h-[130px] xl:w-[90px] xl:h-[90px] xl:min-w-[90px] xl:min-h-[90px] 2xl:w-[130px] 2xl:h-[130px] 2xl:min-w-[130px] 2xl:min-h-[130px] object-cover border border-solid border-gray-1 rounded-custom" />
                             </div>
-                            <div className="flex-1 ml-[15px] flex flex-col">
+                            <div className="flex-1 md:ml-[15px] mt-3 md:mt-0 flex flex-col">
                               <div className="flex justify-between mb-4">
                                   <div className="flex-1">
                                     <h5 className="text-font-16 text-dark-1 font-semibold">Banana Nut Muffins</h5>
                                     <p className="text-font-14 text-basecolor">(6) count</p>
                                   </div>
-                                  <div className="ml-5 w-[90px]">
+                                  <div className="ml-5 w-[70px] text-right">
                                     <p className="text-font-16 text-dark-1 font-bold">$13.99</p>
                                   </div>
                               </div>
@@ -495,7 +485,7 @@ export default function Home() {
                                       </button>
                                   </div>
                                   <div className="ml-5">
-                                      <Link href="#" className="btn btn-green btn-sm" data-te-ripple-init>Add to Cart</Link>
+                                      <Link href="#" className="btn btn-green btn-sm xl:px-3 2xl:px-6" data-te-ripple-init>Add to Cart</Link>
                                   </div>
                               </div>  
                             </div>
@@ -503,17 +493,17 @@ export default function Home() {
                         {/* Product card End*/}
 
                         {/* Product card start*/}
-                        <div className="bg-white p-5 rounded-custom border border-solid border-basecolor/20 flex">
+                        <div className="bg-white p-5 rounded-custom border border-solid border-basecolor/20 md:flex">
                             <div className="meal-image-wrap relative">
-                              <Image src={Thumb1} alt="Meal Program" className="w-[130px] h-[130px] min-w-[130px] min-h-[130px] object-cover border border-solid border-gray-1 rounded-custom" />
+                              <Image src={Thumb1} alt="Meal Program" className="w-full h-[150px] min-w-full min-h-[150px] sm:w-full sm:h-[220px] sm:min-w-full sm:min-h-[220px] md:w-[70px] md:h-[70px] md:min-w-[70px] md:min-h-[70px] lg:w-[130px] lg:h-[130px] lg:min-w-[130px] lg:min-h-[130px] xl:w-[90px] xl:h-[90px] xl:min-w-[90px] xl:min-h-[90px] 2xl:w-[130px] 2xl:h-[130px] 2xl:min-w-[130px] 2xl:min-h-[130px] object-cover border border-solid border-gray-1 rounded-custom" />
                             </div>
-                            <div className="flex-1 ml-[15px] flex flex-col">
+                            <div className="flex-1 md:ml-[15px] mt-3 md:mt-0 flex flex-col">
                               <div className="flex justify-between mb-4">
                                   <div className="flex-1">
                                     <h5 className="text-font-16 text-dark-1 font-semibold">1 Dozen Zucchini Muffins</h5>
                                     <p className="text-font-14 text-basecolor">(12) Count Zucchini Muffins</p>
                                   </div>
-                                  <div className="ml-5 w-[90px]">
+                                  <div className="ml-5 w-[70px] text-right">
                                     <p className="text-font-16 text-dark-1 font-bold">$13.99</p>
                                   </div>
                               </div>
@@ -532,7 +522,7 @@ export default function Home() {
                                       </button>
                                   </div>
                                   <div className="ml-5">
-                                      <Link href="#" className="btn btn-green btn-sm" data-te-ripple-init>Add to Cart</Link>
+                                      <Link href="#" className="btn btn-green btn-sm xl:px-3 2xl:px-6" data-te-ripple-init>Add to Cart</Link>
                                   </div>
                               </div>  
                             </div>
@@ -540,17 +530,17 @@ export default function Home() {
                         {/* Product card End*/}
 
                         {/* Product card start*/}
-                        <div className="bg-white p-5 rounded-custom border border-solid border-basecolor/20 flex">
+                        <div className="bg-white p-5 rounded-custom border border-solid border-basecolor/20 md:flex">
                             <div className="meal-image-wrap relative">
-                              <Image src={Thumb1} alt="Meal Program" className="w-[130px] h-[130px] min-w-[130px] min-h-[130px] object-cover border border-solid border-gray-1 rounded-custom" />
+                              <Image src={Thumb1} alt="Meal Program" className="w-full h-[150px] min-w-full min-h-[150px] sm:w-full sm:h-[220px] sm:min-w-full sm:min-h-[220px] md:w-[70px] md:h-[70px] md:min-w-[70px] md:min-h-[70px] lg:w-[130px] lg:h-[130px] lg:min-w-[130px] lg:min-h-[130px] xl:w-[90px] xl:h-[90px] xl:min-w-[90px] xl:min-h-[90px] 2xl:w-[130px] 2xl:h-[130px] 2xl:min-w-[130px] 2xl:min-h-[130px] object-cover border border-solid border-gray-1 rounded-custom" />
                             </div>
-                            <div className="flex-1 ml-[15px] flex flex-col">
+                            <div className="flex-1 md:ml-[15px] mt-3 md:mt-0 flex flex-col">
                               <div className="flex justify-between mb-4">
                                   <div className="flex-1">
                                     <h5 className="text-font-16 text-dark-1 font-semibold">Banana Nut Muffins</h5>
                                     <p className="text-font-14 text-basecolor">(12) count Banana Nut Muffins 3g P / 3g F / 14g C</p>
                                   </div>
-                                  <div className="ml-5 w-[90px]">
+                                  <div className="ml-5 w-[70px] text-right">
                                     <p className="text-font-16 text-dark-1 font-bold">$13.99</p>
                                   </div>
                               </div>
@@ -569,7 +559,7 @@ export default function Home() {
                                       </button>
                                   </div>
                                   <div className="ml-5">
-                                      <Link href="#" className="btn btn-green btn-sm" data-te-ripple-init>Add to Cart</Link>
+                                      <Link href="#" className="btn btn-green btn-sm xl:px-3 2xl:px-6" data-te-ripple-init>Add to Cart</Link>
                                   </div>
                               </div>  
                             </div>
@@ -577,17 +567,17 @@ export default function Home() {
                         {/* Product card End*/}
 
                         {/* Product card start*/}
-                        <div className="bg-white p-5 rounded-custom border border-solid border-basecolor/20 flex">
+                        <div className="bg-white p-5 rounded-custom border border-solid border-basecolor/20 md:flex">
                             <div className="meal-image-wrap relative">
-                              <Image src={Thumb1} alt="Meal Program" className="w-[130px] h-[130px] min-w-[130px] min-h-[130px] object-cover border border-solid border-gray-1 rounded-custom" />
+                              <Image src={Thumb1} alt="Meal Program" className="w-full h-[150px] min-w-full min-h-[150px] sm:w-full sm:h-[220px] sm:min-w-full sm:min-h-[220px] md:w-[70px] md:h-[70px] md:min-w-[70px] md:min-h-[70px] lg:w-[130px] lg:h-[130px] lg:min-w-[130px] lg:min-h-[130px] xl:w-[90px] xl:h-[90px] xl:min-w-[90px] xl:min-h-[90px] 2xl:w-[130px] 2xl:h-[130px] 2xl:min-w-[130px] 2xl:min-h-[130px] object-cover border border-solid border-gray-1 rounded-custom" />
                             </div>
-                            <div className="flex-1 ml-[15px] flex flex-col">
+                            <div className="flex-1 md:ml-[15px] mt-3 md:mt-0 flex flex-col">
                               <div className="flex justify-between mb-4">
                                   <div className="flex-1">
                                     <h5 className="text-font-16 text-dark-1 font-semibold">1 Dozen Zucchini Muffins</h5>
                                     <p className="text-font-14 text-basecolor">(6) count</p>
                                   </div>
-                                  <div className="ml-5 w-[90px]">
+                                  <div className="ml-5 w-[70px] text-right">
                                     <p className="text-font-16 text-dark-1 font-bold">$13.99</p>
                                   </div>
                               </div>
@@ -606,7 +596,7 @@ export default function Home() {
                                       </button>
                                   </div>
                                   <div className="ml-5">
-                                      <Link href="#" className="btn btn-green btn-sm" data-te-ripple-init>Add to Cart</Link>
+                                      <Link href="#" className="btn btn-green btn-sm xl:px-3 2xl:px-6" data-te-ripple-init>Add to Cart</Link>
                                   </div>
                               </div>  
                             </div>
@@ -637,19 +627,19 @@ export default function Home() {
                   </h2>
                   <div id="mealCollapse4" className="!visible" data-te-collapse-item aria-labelledby="mealCollapseHeading4">
                   <div className="pb-5 px-4 pt-0">
-                      <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+                      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2 gap-5">
                         {/* Product card start*/}
-                        <div className="bg-white p-5 rounded-custom border border-solid border-basecolor/20 flex">
+                        <div className="bg-white p-5 rounded-custom border border-solid border-basecolor/20 md:flex">
                             <div className="meal-image-wrap relative">
-                              <Image src={Thumb1} alt="Meal Program" className="w-[130px] h-[130px] min-w-[130px] min-h-[130px] object-cover border border-solid border-gray-1 rounded-custom" />
+                              <Image src={Thumb1} alt="Meal Program" className="w-full h-[150px] min-w-full min-h-[150px] sm:w-full sm:h-[220px] sm:min-w-full sm:min-h-[220px] md:w-[70px] md:h-[70px] md:min-w-[70px] md:min-h-[70px] lg:w-[130px] lg:h-[130px] lg:min-w-[130px] lg:min-h-[130px] xl:w-[90px] xl:h-[90px] xl:min-w-[90px] xl:min-h-[90px] 2xl:w-[130px] 2xl:h-[130px] 2xl:min-w-[130px] 2xl:min-h-[130px] object-cover border border-solid border-gray-1 rounded-custom" />
                             </div>
-                            <div className="flex-1 ml-[15px] flex flex-col">
+                            <div className="flex-1 md:ml-[15px] mt-3 md:mt-0 flex flex-col">
                               <div className="flex justify-between mb-4">
                                   <div className="flex-1">
                                     <h5 className="text-font-16 text-dark-1 font-semibold">Gift Cards</h5>
                                     <p className="text-font-14 text-basecolor">Gift cards valid at the SLC - Sugarhouse location.</p>
                                   </div>
-                                  <div className="ml-5 w-[90px]">
+                                  <div className="ml-5 w-[70px] text-right">
                                     <p className="text-font-16 text-dark-1 font-bold">$13.99</p>
                                   </div>
                               </div>
@@ -668,7 +658,7 @@ export default function Home() {
                                       </button>
                                   </div>
                                   <div className="ml-5">
-                                      <Link href="#" className="btn btn-green btn-sm" data-te-ripple-init>Add to Cart</Link>
+                                      <Link href="#" className="btn btn-green btn-sm xl:px-3 2xl:px-6" data-te-ripple-init>Add to Cart</Link>
                                   </div>
                               </div>  
                             </div>
