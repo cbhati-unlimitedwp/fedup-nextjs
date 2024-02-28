@@ -6,6 +6,7 @@ import Thumb1 from "../assets/images/thumb-1.jpg"
 import Thumb2 from "../assets/images/thumb-2.jpg"
 import Link from "next/link";
 import Sidebar from "@/components/Sidebar";
+import Footer from "@/components/Footer";
 
 
 export default function Home() {
@@ -679,6 +680,7 @@ export default function Home() {
           </div>
       </div>
     </main>
+    <Footer />
     </>
   );
 }

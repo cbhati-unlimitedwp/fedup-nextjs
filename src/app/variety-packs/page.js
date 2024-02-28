@@ -6,6 +6,7 @@ import Thumb2 from "../../assets/images/thumb-2.jpg"
 import Link from "next/link";
 import Header from "@/components/Header";
 import Sidebar from "@/components/Sidebar";
+import Footer from "@/components/Footer";
 
 
 
@@ -247,6 +248,7 @@ export default function Home() {
           </div>
       </div>
     </main>
+    <Footer />
     </>
   );
 }
