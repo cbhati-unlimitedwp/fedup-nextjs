@@ -3,6 +3,8 @@ import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import Thumb1 from "../../assets/images/thumb-1.jpg"
 import Thumb2 from "../../assets/images/thumb-2.jpg"
+import Thumb3 from "../../assets/images/thumb-3.jpg"
+import Thumb4 from "../../assets/images/thumb-4.jpg"
 import Link from "next/link";
 import Header from "@/components/Header";
 import Sidebar from "@/components/Sidebar";
@@ -130,74 +132,225 @@ export default function Home() {
               {/* How many Each Section Start */}
               <div className="mt-[30px]">
                 <h2 className="text-font-18 mb-5">How many of each? </h2>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5 xl:gap-[30px]">
-                  <div className="how-many-card">
-                      <div className="image-wrap overflow-hidden border border-solid border-gray-1 rounded-custom relative w-full pt-[99.443%]">
-                        <Image src={Thumb1} alt="Variety Packs" className="w-full h-full object-cover absolute top-0 left-0 right-0 bottom-0" />
+                <div className="mt-5 rounded-custom bg-white p-5">
+                  <h3 className="text-font-16 font-bold mb-3">Breakfast</h3>
+                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5 xl:gap-[30px]">
+                    <div className="how-many-card">
+                        <div className="image-wrap overflow-hidden border border-solid border-gray-1 rounded-custom relative w-full pt-[99.443%]">
+                          <Image src={Thumb1} alt="Variety Packs" className="w-full h-full object-cover absolute top-0 left-0 right-0 bottom-0" />
+                        </div>
+                        <div className="flex justify-between mt-4">
+                          <div className="mr-5">
+                              <h5 className="text-font-16">Option 1</h5>
+                          </div>
+                          <div className="quantity-input flex max-w-[120px] md:max-w-[100px] rounded-custom border border-solid border-gray-1">
+                              <button onClick={handleDecrement} data-te-ripple-init className="w-8 min-w-8 h-[30px] bg-transparent text-font-18 font-bold text-basecolor border-0 transition delay-100 flex items-center justify-center">
+                                <svg className="w-[10px] h-[10px] fill-basecolor/50" viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M432 256c0 17.7-14.3 32-32 32L48 288c-17.7 0-32-14.3-32-32s14.3-32 32-32l352 0c17.7 0 32 14.3 32 32z"></path>
+                                </svg>
+                              </button>
+                              <input type="number" value={value} onChange={handleInputChange} className="h-[30px] w-auto min-w-0 text-center bg-transparent border-0 appearance-none text-font-14  placeholder:text-black outline-none shadow-none hover:outline-none hover:shadow-none [&::-webkit-inner-spin-button]:appearance-none"/>
+                              <button onClick={handleIncrement} data-te-ripple-init className="w-8 min-w-8 h-[30px] bg-transparent text-font-18 font-bold text-basecolor border-0 transition delay-100 flex items-center justify-center">
+                                <svg className="w-[10px] h-[10px] fill-basecolor/50" viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32V224H48c-17.7 0-32 14.3-32 32s14.3 32 32 32H192V432c0 17.7 14.3 32 32 32s32-14.3 32-32V288H400c17.7 0 32-14.3 32-32s-14.3-32-32-32H256V80z"></path>
+                                </svg>
+                              </button>
+                          </div>
                       </div>
-                      <div className="flex justify-between mt-4">
-                        <div className="mr-5">
-                            <h5 className="text-font-16">Breakfast</h5>
+                    </div>
+                    <div className="how-many-card">
+                        <div className="image-wrap overflow-hidden border border-solid border-gray-1 rounded-custom relative w-full pt-[99.443%]">
+                          <Image src={Thumb2} alt="Variety Packs" className="w-full h-full object-cover absolute top-0 left-0 right-0 bottom-0" />
                         </div>
-                        <div className="quantity-input flex max-w-[120px] md:max-w-[100px] rounded-custom border border-solid border-gray-1">
-                            <button onClick={handleDecrement} data-te-ripple-init className="w-8 min-w-8 h-[30px] bg-transparent text-font-18 font-bold text-basecolor border-0 transition delay-100 flex items-center justify-center">
-                              <svg className="w-[10px] h-[10px] fill-basecolor/50" viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg">
-                              <path d="M432 256c0 17.7-14.3 32-32 32L48 288c-17.7 0-32-14.3-32-32s14.3-32 32-32l352 0c17.7 0 32 14.3 32 32z"></path>
-                              </svg>
-                            </button>
-                            <input type="number" value={value} onChange={handleInputChange} className="h-[30px] w-auto min-w-0 text-center bg-transparent border-0 appearance-none text-font-14  placeholder:text-black outline-none shadow-none hover:outline-none hover:shadow-none [&::-webkit-inner-spin-button]:appearance-none"/>
-                            <button onClick={handleIncrement} data-te-ripple-init className="w-8 min-w-8 h-[30px] bg-transparent text-font-18 font-bold text-basecolor border-0 transition delay-100 flex items-center justify-center">
-                              <svg className="w-[10px] h-[10px] fill-basecolor/50" viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg">
-                                  <path d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32V224H48c-17.7 0-32 14.3-32 32s14.3 32 32 32H192V432c0 17.7 14.3 32 32 32s32-14.3 32-32V288H400c17.7 0 32-14.3 32-32s-14.3-32-32-32H256V80z"></path>
-                              </svg>
-                            </button>
+                        <div className="flex justify-between mt-4">
+                          <div className="mr-5">
+                              <h5 className="text-font-16">Option 2</h5>
+                          </div>
+                          <div className="quantity-input flex max-w-[120px] md:max-w-[100px] rounded-custom border border-solid border-gray-1">
+                              <button onClick={handleDecrement} data-te-ripple-init className="w-8 min-w-8 h-[30px] bg-transparent text-font-18 font-bold text-basecolor border-0 transition delay-100 flex items-center justify-center">
+                                <svg className="w-[10px] h-[10px] fill-basecolor/50" viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M432 256c0 17.7-14.3 32-32 32L48 288c-17.7 0-32-14.3-32-32s14.3-32 32-32l352 0c17.7 0 32 14.3 32 32z"></path>
+                                </svg>
+                              </button>
+                              <input type="number" value={value} onChange={handleInputChange} className="h-[30px] w-auto min-w-0 text-center bg-transparent border-0 appearance-none text-font-14  placeholder:text-black outline-none shadow-none hover:outline-none hover:shadow-none [&::-webkit-inner-spin-button]:appearance-none"/>
+                              <button onClick={handleIncrement} data-te-ripple-init className="w-8 min-w-8 h-[30px] bg-transparent text-font-18 font-bold text-basecolor border-0 transition delay-100 flex items-center justify-center">
+                                <svg className="w-[10px] h-[10px] fill-basecolor/50" viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32V224H48c-17.7 0-32 14.3-32 32s14.3 32 32 32H192V432c0 17.7 14.3 32 32 32s32-14.3 32-32V288H400c17.7 0 32-14.3 32-32s-14.3-32-32-32H256V80z"></path>
+                                </svg>
+                              </button>
+                          </div>
+                      </div>
+                    </div>
+                    <div className="how-many-card">
+                        <div className="image-wrap overflow-hidden border border-solid border-gray-1 rounded-custom relative w-full pt-[99.443%]">
+                          <Image src={Thumb1} alt="Variety Packs" className="w-full h-full object-cover absolute top-0 left-0 right-0 bottom-0" />
                         </div>
+                        <div className="flex justify-between mt-4">
+                          <div className="mr-5">
+                              <h5 className="text-font-16">Option 3</h5>
+                          </div>
+                          <div className="quantity-input flex max-w-[120px] md:max-w-[100px] rounded-custom border border-solid border-gray-1">
+                              <button onClick={handleDecrement} data-te-ripple-init className="w-8 min-w-8 h-[30px] bg-transparent text-font-18 font-bold text-basecolor border-0 transition delay-100 flex items-center justify-center">
+                                <svg className="w-[10px] h-[10px] fill-basecolor/50" viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M432 256c0 17.7-14.3 32-32 32L48 288c-17.7 0-32-14.3-32-32s14.3-32 32-32l352 0c17.7 0 32 14.3 32 32z"></path>
+                                </svg>
+                              </button>
+                              <input type="number" value={value} onChange={handleInputChange} className="h-[30px] w-auto min-w-0 text-center bg-transparent border-0 appearance-none text-font-14  placeholder:text-black outline-none shadow-none hover:outline-none hover:shadow-none [&::-webkit-inner-spin-button]:appearance-none"/>
+                              <button onClick={handleIncrement} data-te-ripple-init className="w-8 min-w-8 h-[30px] bg-transparent text-font-18 font-bold text-basecolor border-0 transition delay-100 flex items-center justify-center">
+                                <svg className="w-[10px] h-[10px] fill-basecolor/50" viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32V224H48c-17.7 0-32 14.3-32 32s14.3 32 32 32H192V432c0 17.7 14.3 32 32 32s32-14.3 32-32V288H400c17.7 0 32-14.3 32-32s-14.3-32-32-32H256V80z"></path>
+                                </svg>
+                              </button>
+                          </div>
+                      </div>
                     </div>
                   </div>
-                  <div className="how-many-card">
-                      <div className="image-wrap overflow-hidden border border-solid border-gray-1 rounded-custom relative w-full pt-[99.443%]">
-                        <Image src={Thumb2} alt="Variety Packs" className="w-full h-full object-cover absolute top-0 left-0 right-0 bottom-0" />
+                </div>
+                <div className="mt-5 rounded-custom bg-white p-5">
+                  <h3 className="text-font-16 font-bold mb-3">Lunch</h3>
+                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5 xl:gap-[30px]">
+                    <div className="how-many-card">
+                        <div className="image-wrap overflow-hidden border border-solid border-gray-1 rounded-custom relative w-full pt-[99.443%]">
+                          <Image src={Thumb1} alt="Variety Packs" className="w-full h-full object-cover absolute top-0 left-0 right-0 bottom-0" />
+                        </div>
+                        <div className="flex justify-between mt-4">
+                          <div className="mr-5">
+                              <h5 className="text-font-16">Option 1</h5>
+                          </div>
+                          <div className="quantity-input flex max-w-[120px] md:max-w-[100px] rounded-custom border border-solid border-gray-1">
+                              <button onClick={handleDecrement} data-te-ripple-init className="w-8 min-w-8 h-[30px] bg-transparent text-font-18 font-bold text-basecolor border-0 transition delay-100 flex items-center justify-center">
+                                <svg className="w-[10px] h-[10px] fill-basecolor/50" viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M432 256c0 17.7-14.3 32-32 32L48 288c-17.7 0-32-14.3-32-32s14.3-32 32-32l352 0c17.7 0 32 14.3 32 32z"></path>
+                                </svg>
+                              </button>
+                              <input type="number" value={value} onChange={handleInputChange} className="h-[30px] w-auto min-w-0 text-center bg-transparent border-0 appearance-none text-font-14  placeholder:text-black outline-none shadow-none hover:outline-none hover:shadow-none [&::-webkit-inner-spin-button]:appearance-none"/>
+                              <button onClick={handleIncrement} data-te-ripple-init className="w-8 min-w-8 h-[30px] bg-transparent text-font-18 font-bold text-basecolor border-0 transition delay-100 flex items-center justify-center">
+                                <svg className="w-[10px] h-[10px] fill-basecolor/50" viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32V224H48c-17.7 0-32 14.3-32 32s14.3 32 32 32H192V432c0 17.7 14.3 32 32 32s32-14.3 32-32V288H400c17.7 0 32-14.3 32-32s-14.3-32-32-32H256V80z"></path>
+                                </svg>
+                              </button>
+                          </div>
                       </div>
-                      <div className="flex justify-between mt-4">
-                        <div className="mr-5">
-                            <h5 className="text-font-16">Lunch</h5>
+                    </div>
+                    <div className="how-many-card">
+                        <div className="image-wrap overflow-hidden border border-solid border-gray-1 rounded-custom relative w-full pt-[99.443%]">
+                          <Image src={Thumb2} alt="Variety Packs" className="w-full h-full object-cover absolute top-0 left-0 right-0 bottom-0" />
                         </div>
-                        <div className="quantity-input flex max-w-[120px] md:max-w-[100px] rounded-custom border border-solid border-gray-1">
-                            <button onClick={handleDecrement} data-te-ripple-init className="w-8 min-w-8 h-[30px] bg-transparent text-font-18 font-bold text-basecolor border-0 transition delay-100 flex items-center justify-center">
-                              <svg className="w-[10px] h-[10px] fill-basecolor/50" viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg">
-                              <path d="M432 256c0 17.7-14.3 32-32 32L48 288c-17.7 0-32-14.3-32-32s14.3-32 32-32l352 0c17.7 0 32 14.3 32 32z"></path>
-                              </svg>
-                            </button>
-                            <input type="number" value={value} onChange={handleInputChange} className="h-[30px] w-auto min-w-0 text-center bg-transparent border-0 appearance-none text-font-14  placeholder:text-black outline-none shadow-none hover:outline-none hover:shadow-none [&::-webkit-inner-spin-button]:appearance-none"/>
-                            <button onClick={handleIncrement} data-te-ripple-init className="w-8 min-w-8 h-[30px] bg-transparent text-font-18 font-bold text-basecolor border-0 transition delay-100 flex items-center justify-center">
-                              <svg className="w-[10px] h-[10px] fill-basecolor/50" viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg">
-                                  <path d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32V224H48c-17.7 0-32 14.3-32 32s14.3 32 32 32H192V432c0 17.7 14.3 32 32 32s32-14.3 32-32V288H400c17.7 0 32-14.3 32-32s-14.3-32-32-32H256V80z"></path>
-                              </svg>
-                            </button>
+                        <div className="flex justify-between mt-4">
+                          <div className="mr-5">
+                              <h5 className="text-font-16">Option 2</h5>
+                          </div>
+                          <div className="quantity-input flex max-w-[120px] md:max-w-[100px] rounded-custom border border-solid border-gray-1">
+                              <button onClick={handleDecrement} data-te-ripple-init className="w-8 min-w-8 h-[30px] bg-transparent text-font-18 font-bold text-basecolor border-0 transition delay-100 flex items-center justify-center">
+                                <svg className="w-[10px] h-[10px] fill-basecolor/50" viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M432 256c0 17.7-14.3 32-32 32L48 288c-17.7 0-32-14.3-32-32s14.3-32 32-32l352 0c17.7 0 32 14.3 32 32z"></path>
+                                </svg>
+                              </button>
+                              <input type="number" value={value} onChange={handleInputChange} className="h-[30px] w-auto min-w-0 text-center bg-transparent border-0 appearance-none text-font-14  placeholder:text-black outline-none shadow-none hover:outline-none hover:shadow-none [&::-webkit-inner-spin-button]:appearance-none"/>
+                              <button onClick={handleIncrement} data-te-ripple-init className="w-8 min-w-8 h-[30px] bg-transparent text-font-18 font-bold text-basecolor border-0 transition delay-100 flex items-center justify-center">
+                                <svg className="w-[10px] h-[10px] fill-basecolor/50" viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32V224H48c-17.7 0-32 14.3-32 32s14.3 32 32 32H192V432c0 17.7 14.3 32 32 32s32-14.3 32-32V288H400c17.7 0 32-14.3 32-32s-14.3-32-32-32H256V80z"></path>
+                                </svg>
+                              </button>
+                          </div>
+                      </div>
+                    </div>
+                    <div className="how-many-card">
+                        <div className="image-wrap overflow-hidden border border-solid border-gray-1 rounded-custom relative w-full pt-[99.443%]">
+                          <Image src={Thumb1} alt="Variety Packs" className="w-full h-full object-cover absolute top-0 left-0 right-0 bottom-0" />
                         </div>
+                        <div className="flex justify-between mt-4">
+                          <div className="mr-5">
+                              <h5 className="text-font-16">Option 3</h5>
+                          </div>
+                          <div className="quantity-input flex max-w-[120px] md:max-w-[100px] rounded-custom border border-solid border-gray-1">
+                              <button onClick={handleDecrement} data-te-ripple-init className="w-8 min-w-8 h-[30px] bg-transparent text-font-18 font-bold text-basecolor border-0 transition delay-100 flex items-center justify-center">
+                                <svg className="w-[10px] h-[10px] fill-basecolor/50" viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M432 256c0 17.7-14.3 32-32 32L48 288c-17.7 0-32-14.3-32-32s14.3-32 32-32l352 0c17.7 0 32 14.3 32 32z"></path>
+                                </svg>
+                              </button>
+                              <input type="number" value={value} onChange={handleInputChange} className="h-[30px] w-auto min-w-0 text-center bg-transparent border-0 appearance-none text-font-14  placeholder:text-black outline-none shadow-none hover:outline-none hover:shadow-none [&::-webkit-inner-spin-button]:appearance-none"/>
+                              <button onClick={handleIncrement} data-te-ripple-init className="w-8 min-w-8 h-[30px] bg-transparent text-font-18 font-bold text-basecolor border-0 transition delay-100 flex items-center justify-center">
+                                <svg className="w-[10px] h-[10px] fill-basecolor/50" viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32V224H48c-17.7 0-32 14.3-32 32s14.3 32 32 32H192V432c0 17.7 14.3 32 32 32s32-14.3 32-32V288H400c17.7 0 32-14.3 32-32s-14.3-32-32-32H256V80z"></path>
+                                </svg>
+                              </button>
+                          </div>
+                      </div>
                     </div>
                   </div>
-                  <div className="how-many-card">
-                      <div className="image-wrap overflow-hidden border border-solid border-gray-1 rounded-custom relative w-full pt-[99.443%]">
-                        <Image src={Thumb1} alt="Variety Packs" className="w-full h-full object-cover absolute top-0 left-0 right-0 bottom-0" />
+                </div>
+                <div className="mt-5 rounded-custom bg-white p-5">
+                  <h3 className="text-font-16 font-bold mb-3">Dinner</h3>
+                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5 xl:gap-[30px]">
+                    <div className="how-many-card">
+                        <div className="image-wrap overflow-hidden border border-solid border-gray-1 rounded-custom relative w-full pt-[99.443%]">
+                          <Image src={Thumb1} alt="Variety Packs" className="w-full h-full object-cover absolute top-0 left-0 right-0 bottom-0" />
+                        </div>
+                        <div className="flex justify-between mt-4">
+                          <div className="mr-5">
+                              <h5 className="text-font-16">Option 1</h5>
+                          </div>
+                          <div className="quantity-input flex max-w-[120px] md:max-w-[100px] rounded-custom border border-solid border-gray-1">
+                              <button onClick={handleDecrement} data-te-ripple-init className="w-8 min-w-8 h-[30px] bg-transparent text-font-18 font-bold text-basecolor border-0 transition delay-100 flex items-center justify-center">
+                                <svg className="w-[10px] h-[10px] fill-basecolor/50" viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M432 256c0 17.7-14.3 32-32 32L48 288c-17.7 0-32-14.3-32-32s14.3-32 32-32l352 0c17.7 0 32 14.3 32 32z"></path>
+                                </svg>
+                              </button>
+                              <input type="number" value={value} onChange={handleInputChange} className="h-[30px] w-auto min-w-0 text-center bg-transparent border-0 appearance-none text-font-14  placeholder:text-black outline-none shadow-none hover:outline-none hover:shadow-none [&::-webkit-inner-spin-button]:appearance-none"/>
+                              <button onClick={handleIncrement} data-te-ripple-init className="w-8 min-w-8 h-[30px] bg-transparent text-font-18 font-bold text-basecolor border-0 transition delay-100 flex items-center justify-center">
+                                <svg className="w-[10px] h-[10px] fill-basecolor/50" viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32V224H48c-17.7 0-32 14.3-32 32s14.3 32 32 32H192V432c0 17.7 14.3 32 32 32s32-14.3 32-32V288H400c17.7 0 32-14.3 32-32s-14.3-32-32-32H256V80z"></path>
+                                </svg>
+                              </button>
+                          </div>
                       </div>
-                      <div className="flex justify-between mt-4">
-                        <div className="mr-5">
-                            <h5 className="text-font-16">Dinner</h5>
+                    </div>
+                    <div className="how-many-card">
+                        <div className="image-wrap overflow-hidden border border-solid border-gray-1 rounded-custom relative w-full pt-[99.443%]">
+                          <Image src={Thumb2} alt="Variety Packs" className="w-full h-full object-cover absolute top-0 left-0 right-0 bottom-0" />
                         </div>
-                        <div className="quantity-input flex max-w-[120px] md:max-w-[100px] rounded-custom border border-solid border-gray-1">
-                            <button onClick={handleDecrement} data-te-ripple-init className="w-8 min-w-8 h-[30px] bg-transparent text-font-18 font-bold text-basecolor border-0 transition delay-100 flex items-center justify-center">
-                              <svg className="w-[10px] h-[10px] fill-basecolor/50" viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg">
-                              <path d="M432 256c0 17.7-14.3 32-32 32L48 288c-17.7 0-32-14.3-32-32s14.3-32 32-32l352 0c17.7 0 32 14.3 32 32z"></path>
-                              </svg>
-                            </button>
-                            <input type="number" value={value} onChange={handleInputChange} className="h-[30px] w-auto min-w-0 text-center bg-transparent border-0 appearance-none text-font-14  placeholder:text-black outline-none shadow-none hover:outline-none hover:shadow-none [&::-webkit-inner-spin-button]:appearance-none"/>
-                            <button onClick={handleIncrement} data-te-ripple-init className="w-8 min-w-8 h-[30px] bg-transparent text-font-18 font-bold text-basecolor border-0 transition delay-100 flex items-center justify-center">
-                              <svg className="w-[10px] h-[10px] fill-basecolor/50" viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg">
-                                  <path d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32V224H48c-17.7 0-32 14.3-32 32s14.3 32 32 32H192V432c0 17.7 14.3 32 32 32s32-14.3 32-32V288H400c17.7 0 32-14.3 32-32s-14.3-32-32-32H256V80z"></path>
-                              </svg>
-                            </button>
+                        <div className="flex justify-between mt-4">
+                          <div className="mr-5">
+                              <h5 className="text-font-16">Option 2</h5>
+                          </div>
+                          <div className="quantity-input flex max-w-[120px] md:max-w-[100px] rounded-custom border border-solid border-gray-1">
+                              <button onClick={handleDecrement} data-te-ripple-init className="w-8 min-w-8 h-[30px] bg-transparent text-font-18 font-bold text-basecolor border-0 transition delay-100 flex items-center justify-center">
+                                <svg className="w-[10px] h-[10px] fill-basecolor/50" viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M432 256c0 17.7-14.3 32-32 32L48 288c-17.7 0-32-14.3-32-32s14.3-32 32-32l352 0c17.7 0 32 14.3 32 32z"></path>
+                                </svg>
+                              </button>
+                              <input type="number" value={value} onChange={handleInputChange} className="h-[30px] w-auto min-w-0 text-center bg-transparent border-0 appearance-none text-font-14  placeholder:text-black outline-none shadow-none hover:outline-none hover:shadow-none [&::-webkit-inner-spin-button]:appearance-none"/>
+                              <button onClick={handleIncrement} data-te-ripple-init className="w-8 min-w-8 h-[30px] bg-transparent text-font-18 font-bold text-basecolor border-0 transition delay-100 flex items-center justify-center">
+                                <svg className="w-[10px] h-[10px] fill-basecolor/50" viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32V224H48c-17.7 0-32 14.3-32 32s14.3 32 32 32H192V432c0 17.7 14.3 32 32 32s32-14.3 32-32V288H400c17.7 0 32-14.3 32-32s-14.3-32-32-32H256V80z"></path>
+                                </svg>
+                              </button>
+                          </div>
+                      </div>
+                    </div>
+                    <div className="how-many-card">
+                        <div className="image-wrap overflow-hidden border border-solid border-gray-1 rounded-custom relative w-full pt-[99.443%]">
+                          <Image src={Thumb1} alt="Variety Packs" className="w-full h-full object-cover absolute top-0 left-0 right-0 bottom-0" />
                         </div>
+                        <div className="flex justify-between mt-4">
+                          <div className="mr-5">
+                              <h5 className="text-font-16">Option 3</h5>
+                          </div>
+                          <div className="quantity-input flex max-w-[120px] md:max-w-[100px] rounded-custom border border-solid border-gray-1">
+                              <button onClick={handleDecrement} data-te-ripple-init className="w-8 min-w-8 h-[30px] bg-transparent text-font-18 font-bold text-basecolor border-0 transition delay-100 flex items-center justify-center">
+                                <svg className="w-[10px] h-[10px] fill-basecolor/50" viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M432 256c0 17.7-14.3 32-32 32L48 288c-17.7 0-32-14.3-32-32s14.3-32 32-32l352 0c17.7 0 32 14.3 32 32z"></path>
+                                </svg>
+                              </button>
+                              <input type="number" value={value} onChange={handleInputChange} className="h-[30px] w-auto min-w-0 text-center bg-transparent border-0 appearance-none text-font-14  placeholder:text-black outline-none shadow-none hover:outline-none hover:shadow-none [&::-webkit-inner-spin-button]:appearance-none"/>
+                              <button onClick={handleIncrement} data-te-ripple-init className="w-8 min-w-8 h-[30px] bg-transparent text-font-18 font-bold text-basecolor border-0 transition delay-100 flex items-center justify-center">
+                                <svg className="w-[10px] h-[10px] fill-basecolor/50" viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32V224H48c-17.7 0-32 14.3-32 32s14.3 32 32 32H192V432c0 17.7 14.3 32 32 32s32-14.3 32-32V288H400c17.7 0 32-14.3 32-32s-14.3-32-32-32H256V80z"></path>
+                                </svg>
+                              </button>
+                          </div>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -209,15 +362,17 @@ export default function Home() {
                 <h2 className="text-font-18 mb-5">Select your add-ons (Optinal)</h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5 xl:gap-[30px]">
                   <div className="relative custom-check">
-                    <input className="custom-check-input" type="radio" name="SelectYourAddOns" id="selectAddonsCheck1" defaultChecked />
-                    <label className="custom-check-label" htmlFor="selectAddonsCheck1" data-te-ripple-init>
+                    <input className="custom-check-input" type="radio" name="SelectYourAddOns" id="selectAddonsCheck1" />
+                    <label className="custom-check-label text-center" htmlFor="selectAddonsCheck1" data-te-ripple-init>
+                      <Image src={Thumb3} alt="Meal Program" className="w-[100px] h-[100px] max-w-[100px] min-w-[100px] object-cover border-[5px] border-solid border-gray-300/70 shadow-3-strong rounded-full mb-3 mx-auto" />
                       <span className="custom-check-title text-font-18 font-bold block">Protein Muffins</span>
                       <span className="custom-check-price text-font-16 font-normal block">6 Protein Muffins per box</span>
                     </label>
                   </div>
                   <div className="relative custom-check">
                     <input className="custom-check-input" type="radio" name="SelectYourAddOns" id="selectAddonsCheck2" />
-                    <label className="custom-check-label" htmlFor="selectAddonsCheck2" data-te-ripple-init>
+                    <label className="custom-check-label text-center" htmlFor="selectAddonsCheck2" data-te-ripple-init>
+                      <Image src={Thumb4} alt="Meal Program" className="w-[100px] h-[100px] max-w-[100px] min-w-[100px] object-cover border-[5px] border-solid border-gray-300/70 shadow-3-strong rounded-full mb-3 mx-auto" />
                       <span className="custom-check-title text-font-18 font-bold block">Protein Muffins</span>
                       <span className="custom-check-price text-font-16 font-normal block">6 Protein Muffins per box</span>
                     </label>

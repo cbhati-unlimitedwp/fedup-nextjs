@@ -3,6 +3,8 @@ import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import Thumb1 from "../../assets/images/thumb-1.jpg"
 import Thumb2 from "../../assets/images/thumb-2.jpg"
+import Thumb3 from "../../assets/images/thumb-3.jpg"
+import Thumb4 from "../../assets/images/thumb-4.jpg"
 import Link from "next/link";
 import Header from "@/components/Header";
 import Sidebar from "@/components/Sidebar";
@@ -151,7 +153,8 @@ export default function Home() {
                   <div className="relative custom-check">
                     <input className="custom-check-input" type="radio" name="SelectYourAddOns" id="selectAddonsCheck1" defaultChecked />
                     <label className="custom-check-label" htmlFor="selectAddonsCheck1" data-te-ripple-init>
-                      <span className="custom-check-label-content flex flex-col h-full">
+                      <span className="custom-check-label-content flex flex-col h-full text-center">
+                        <Image src={Thumb3} alt="Meal Program" className="w-[100px] h-[100px] max-w-[100px] min-w-[100px] object-cover border-[5px] border-solid border-gray-300/70 shadow-3-strong rounded-full mb-3 mx-auto" />
                         <span className="custom-check-price text-font-16 font-normal block mb-2">5 Jumbo Cookies + 6 Protein Mufns weekly</span>
                         <span className="custom-check-title text-font-18 font-bold block mt-auto">Add $90</span>
                       </span>
@@ -160,7 +163,8 @@ export default function Home() {
                   <div className="relative custom-check">
                     <input className="custom-check-input" type="radio" name="SelectYourAddOns" id="selectAddonsCheck2" />
                     <label className="custom-check-label" htmlFor="selectAddonsCheck2" data-te-ripple-init>
-                      <span className="custom-check-label-content flex flex-col h-full">
+                      <span className="custom-check-label-content flex flex-col h-full text-center">
+                        <Image src={Thumb2} alt="Meal Program" className="w-[100px] h-[100px] max-w-[100px] min-w-[100px] object-cover border-[5px] border-solid border-gray-300/70 shadow-3-strong rounded-full mb-3 mx-auto" />
                         <span className="custom-check-price text-font-16 font-normal block mb-2">4 Parfaits weekly</span>
                         <span className="custom-check-title text-font-18 font-bold block mt-auto">Add $120</span>
                       </span>
@@ -169,7 +173,8 @@ export default function Home() {
                   <div className="relative custom-check">
                     <input className="custom-check-input" type="radio" name="SelectYourAddOns" id="selectAddonsCheck3" />
                     <label className="custom-check-label" htmlFor="selectAddonsCheck3" data-te-ripple-init>
-                      <span className="custom-check-label-content flex flex-col h-full">
+                      <span className="custom-check-label-content flex flex-col h-full text-center">
+                        <Image src={Thumb1} alt="Meal Program" className="w-[100px] h-[100px] max-w-[100px] min-w-[100px] object-cover border-[5px] border-solid border-gray-300/70 shadow-3-strong rounded-full mb-3 mx-auto" />
                         <span className="custom-check-price text-font-16 font-normal block mb-2">12 Protein Mufns + 6 Cream Filled Mufns + 5 Jumbo Cookies weekly</span>
                         <span className="custom-check-title text-font-18 font-bold block mt-auto">Add $180</span>
                       </span>
@@ -178,7 +183,8 @@ export default function Home() {
                   <div className="relative custom-check">
                     <input className="custom-check-input" type="radio" name="SelectYourAddOns" id="selectAddonsCheck4" />
                     <label className="custom-check-label" htmlFor="selectAddonsCheck4" data-te-ripple-init>
-                      <span className="custom-check-label-content flex flex-col h-full">
+                      <span className="custom-check-label-content flex flex-col h-full text-center">
+                        <Image src={Thumb2} alt="Meal Program" className="w-[100px] h-[100px] max-w-[100px] min-w-[100px] object-cover border-[5px] border-solid border-gray-300/70 shadow-3-strong rounded-full mb-3 mx-auto" />
                         <span className="custom-check-price text-font-16 font-normal block mb-2">7 Healthy Green Drinks weekly</span>
                         <span className="custom-check-title text-font-18 font-bold block mt-auto">Add $210</span>
                       </span>
@@ -187,7 +193,8 @@ export default function Home() {
                   <div className="relative custom-check">
                     <input className="custom-check-input" type="radio" name="SelectYourAddOns" id="selectAddonsCheck5" />
                     <label className="custom-check-label" htmlFor="selectAddonsCheck5" data-te-ripple-init>
-                      <span className="custom-check-label-content flex flex-col h-full">
+                      <span className="custom-check-label-content flex flex-col h-full text-center">
+                        <Image src={Thumb4} alt="Meal Program" className="w-[100px] h-[100px] max-w-[100px] min-w-[100px] object-cover border-[5px] border-solid border-gray-300/70 shadow-3-strong rounded-full mb-3 mx-auto" />
                         <span className="custom-check-price text-font-16 font-normal block mb-2">5 Jumbo Protein Cookies + 6 Protein Mufns + 7 Green Drinks weekly</span>
                         <span className="custom-check-title text-font-18 font-bold block mt-auto">Add $210</span>
                       </span>
@@ -196,7 +203,8 @@ export default function Home() {
                   <div className="relative custom-check">
                     <input className="custom-check-input" type="radio" name="SelectYourAddOns" id="selectAddonsCheck6" />
                     <label className="custom-check-label" htmlFor="selectAddonsCheck6" data-te-ripple-init>
-                      <span className="custom-check-label-content flex flex-col h-full">
+                      <span className="custom-check-label-content flex flex-col h-full text-center">
+                        <Image src={Thumb3} alt="Meal Program" className="w-[100px] h-[100px] max-w-[100px] min-w-[100px] object-cover border-[5px] border-solid border-gray-300/70 shadow-3-strong rounded-full mb-3 mx-auto" />
                         <span className="custom-check-price text-font-16 font-normal block mb-2">12 Protein Mufns + 6 Cream Filled Mufns + 5 Jumbo Cookies + 7 Green Drinks + 4 Parfaits weekly</span>
                         <span className="custom-check-title text-font-18 font-bold block mt-auto">Add $210</span>
                       </span>

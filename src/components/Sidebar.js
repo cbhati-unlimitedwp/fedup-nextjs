@@ -29,7 +29,7 @@ const Sidebar = () => {
 
   return (
     <>
-    <div className="right-sidebar w-full lg:w-[365px] hidden lg:block">
+      <div className="right-sidebar w-full lg:w-[365px] hidden lg:block">
        <div className="bg-white rounded-custom shadow-custom-1">
           {/* Select Pick up Date Start */}
           <div className="p-5">
@@ -124,53 +124,17 @@ const Sidebar = () => {
                       <div className='mt-2 rounded-custom border border-solid border-gray-1 p-3'>
                         <p className='font-bold text-font-14 mb-2'>Choose your meal preference.</p>
                         <div>
-                          <div className="flex justify-between items-center mb-2 last:mb-0">
-                            <span className="mr-2">Breakfast </span>
-                            <div className="quantity-input flex max-w-[120px] md:max-w-[100px] rounded-custom border border-solid border-gray-1">
-                                <button onClick={handleDecrement} data-te-ripple-init className="w-8 min-w-8 h-[30px] bg-transparent text-font-18 font-bold text-basecolor border-0 transition delay-100 flex items-center justify-center">
-                                  <svg className="w-[10px] h-[10px] fill-basecolor/50" viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg">
-                                  <path d="M432 256c0 17.7-14.3 32-32 32L48 288c-17.7 0-32-14.3-32-32s14.3-32 32-32l352 0c17.7 0 32 14.3 32 32z"></path>
-                                  </svg>
-                                </button>
-                                <input type="number" value={value} onChange={handleInputChange} className="h-[30px] w-auto min-w-0 text-center bg-transparent border-0 appearance-none text-font-14  placeholder:text-black outline-none shadow-none hover:outline-none hover:shadow-none [&::-webkit-inner-spin-button]:appearance-none"/>
-                                <button onClick={handleIncrement} data-te-ripple-init className="w-8 min-w-8 h-[30px] bg-transparent text-font-18 font-bold text-basecolor border-0 transition delay-100 flex items-center justify-center">
-                                  <svg className="w-[10px] h-[10px] fill-basecolor/50" viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg">
-                                      <path d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32V224H48c-17.7 0-32 14.3-32 32s14.3 32 32 32H192V432c0 17.7 14.3 32 32 32s32-14.3 32-32V288H400c17.7 0 32-14.3 32-32s-14.3-32-32-32H256V80z"></path>
-                                  </svg>
-                                </button>
-                            </div>
+                          <div className="flex justify-between items-center mb-2 pb-2 last:pb-0 last:mb-0 border-b border-dashed border-gray-1 last:border-b-0">
+                            <span className="mr-2 font-semibold text-font-14">Breakfast: </span>
+                            <span className="text-font-14 font-semibold">5</span>
                           </div>
-                          <div className="flex justify-between items-center mb-2 last:mb-0">
-                            <span className="mr-2">Lunch    </span>
-                            <div className="quantity-input flex max-w-[120px] md:max-w-[100px] rounded-custom border border-solid border-gray-1">
-                                <button onClick={handleDecrement} data-te-ripple-init className="w-8 min-w-8 h-[30px] bg-transparent text-font-18 font-bold text-basecolor border-0 transition delay-100 flex items-center justify-center">
-                                  <svg className="w-[10px] h-[10px] fill-basecolor/50" viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg">
-                                  <path d="M432 256c0 17.7-14.3 32-32 32L48 288c-17.7 0-32-14.3-32-32s14.3-32 32-32l352 0c17.7 0 32 14.3 32 32z"></path>
-                                  </svg>
-                                </button>
-                                <input type="number" value={value} onChange={handleInputChange} className="h-[30px] w-auto min-w-0 text-center bg-transparent border-0 appearance-none text-font-14  placeholder:text-black outline-none shadow-none hover:outline-none hover:shadow-none [&::-webkit-inner-spin-button]:appearance-none"/>
-                                <button onClick={handleIncrement} data-te-ripple-init className="w-8 min-w-8 h-[30px] bg-transparent text-font-18 font-bold text-basecolor border-0 transition delay-100 flex items-center justify-center">
-                                  <svg className="w-[10px] h-[10px] fill-basecolor/50" viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg">
-                                      <path d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32V224H48c-17.7 0-32 14.3-32 32s14.3 32 32 32H192V432c0 17.7 14.3 32 32 32s32-14.3 32-32V288H400c17.7 0 32-14.3 32-32s-14.3-32-32-32H256V80z"></path>
-                                  </svg>
-                                </button>
-                            </div>
+                          <div className="flex justify-between items-center mb-2 pb-2 last:pb-0 last:mb-0 border-b border-dashed border-gray-1 last:border-b-0">
+                            <span className="mr-2 font-semibold text-font-14">Lunch:</span>
+                            <span className="text-font-14 font-semibold">2</span>
                           </div>
-                          <div className="flex justify-between items-center mb-2 last:mb-0">
-                            <span className="mr-2">Dinner   </span>
-                            <div className="quantity-input flex max-w-[120px] md:max-w-[100px] rounded-custom border border-solid border-gray-1">
-                                <button onClick={handleDecrement} data-te-ripple-init className="w-8 min-w-8 h-[30px] bg-transparent text-font-18 font-bold text-basecolor border-0 transition delay-100 flex items-center justify-center">
-                                  <svg className="w-[10px] h-[10px] fill-basecolor/50" viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg">
-                                  <path d="M432 256c0 17.7-14.3 32-32 32L48 288c-17.7 0-32-14.3-32-32s14.3-32 32-32l352 0c17.7 0 32 14.3 32 32z"></path>
-                                  </svg>
-                                </button>
-                                <input type="number" value={value} onChange={handleInputChange} className="h-[30px] w-auto min-w-0 text-center bg-transparent border-0 appearance-none text-font-14  placeholder:text-black outline-none shadow-none hover:outline-none hover:shadow-none [&::-webkit-inner-spin-button]:appearance-none"/>
-                                <button onClick={handleIncrement} data-te-ripple-init className="w-8 min-w-8 h-[30px] bg-transparent text-font-18 font-bold text-basecolor border-0 transition delay-100 flex items-center justify-center">
-                                  <svg className="w-[10px] h-[10px] fill-basecolor/50" viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg">
-                                      <path d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32V224H48c-17.7 0-32 14.3-32 32s14.3 32 32 32H192V432c0 17.7 14.3 32 32 32s32-14.3 32-32V288H400c17.7 0 32-14.3 32-32s-14.3-32-32-32H256V80z"></path>
-                                  </svg>
-                                </button>
-                            </div>
+                          <div className="flex justify-between items-center mb-2 pb-2 last:pb-0 last:mb-0 border-b border-dashed border-gray-1 last:border-b-0">
+                            <span className="mr-2 font-semibold text-font-14">Dinner: </span>
+                            <span className="text-font-14 font-semibold">1</span>
                           </div>
                         </div>
                       </div>
@@ -245,6 +209,9 @@ const Sidebar = () => {
 
        </div>
       </div>
+
+      {/* Add To cart Button for the Mobile Bottom */}
+      <button type="button" data-te-ripple-init data-te-ripple-color="dark" className="btn btn-md btn-green w-full fixed bottom-0 left-0 right-0 rounded-b-none z-10 lg:hidden">Checkout</button>
     </>
   );
 }

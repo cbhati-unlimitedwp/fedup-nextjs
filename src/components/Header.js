@@ -8,8 +8,8 @@ import MenuBar from '../assets/images/menu-bar.svg';
 const Header = () => {
     useEffect(() => {
         const init = async () => {
-            const { Collapse, Dropdown, Offcanvas, Tooltip, initTE } = await import("tw-elements");
-            initTE({ Collapse, Dropdown, Offcanvas, Tooltip });
+            const { Collapse, Dropdown, Offcanvas, Tooltip, Sidenav, initTE } = await import("tw-elements");
+            initTE({ Collapse, Dropdown, Offcanvas, Tooltip, Sidenav, });
         };
         init();
     }, []);
@@ -22,7 +22,7 @@ const Header = () => {
             <div className="flex w-full flex-wrap items-center justify-between ">
                 {/* <!-- Logo --> */}
                 <a href="#" className="flex flex-col lg:flex-row items-start lg:items-center">
-                    <Image src={Logo} className="w-auto h-[60px] " alt="Fedup Logo" priority />
+                    <Image src={Logo} className="w-auto h-12 lg:h-[60px] " alt="Fedup Logo" priority />
                     <span className='text-black text-font-14 lg:text-font-16 font-semibold lg:ml-3 lg:border-l lg:border-solid lg:border-black lg:pl-3 mt-0.5 lg:mt-0'>SLC - Sugarhouse</span>
                 </a>
 
@@ -94,7 +94,7 @@ const Header = () => {
                 </a>
 
                 {/* <!-- Sidenav and Mobilemenu start --> */}
-                <div className="invisible fixed bottom-0 left-0 top-0 z-[1045] flex w-11/12  max-w-[280px] -translate-x-full flex-col border-none bg-dark-2 bg-clip-padding text-white shadow-sm outline-none transition duration-300 ease-in-out [&[data-te-offcanvas-show]]:transform-none" tabIndex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel" data-te-offcanvas-init>
+                <div className="invisible fixed bottom-0 left-0 top-0 z-[1045] flex w-11/12  max-w-[272px] -translate-x-full flex-col border-none bg-dark-2 bg-clip-padding text-white shadow-sm outline-none transition duration-300 ease-in-out [&[data-te-offcanvas-show]]:transform-none" tabIndex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel" data-te-offcanvas-init>
                     <div className="flex items-center justify-end p-4">
                         <button type="button" className="box-content rounded-none border-none opacity-50 hover:no-underline hover:opacity-75 focus:opacity-100 focus:shadow-none focus:outline-none" data-te-offcanvas-dismiss>
                             <span  className="w-7 focus:opacity-100 disabled:pointer-events-none disabled:select-none disabled:opacity-25 [&.disabled]:pointer-events-none [&.disabled]:select-none [&.disabled]:opacity-25">
@@ -104,41 +104,73 @@ const Header = () => {
                             </span>
                         </button>
                     </div>
-                    <div className="flex-grow flex flex-col overflow-y-auto p-4">
-                        <div>
-                            <nav className="relative" >
-                                <ul className="list-style-none flex flex-col pl-0 *:pb-4"
-                                    data-te-navbar-nav-ref>
-                                    <li className="lg:hidden">
-                                        <a className="text-font-16 lg:text-font-20 font-semibold text-light-green transition duration-200 hover:text-light-green hover:underline hover:ease-in-out focus:text-light-green motion-reduce:transition-none [&.active]:text-white"
-                                        href="#" >Order Now</a>
-                                    </li>
-                                    
-                                    <li className="">
-                                        <a className="text-font-16 lg:text-font-20 font-semibold text-light-green transition duration-200 hover:text-light-green hover:underline hover:ease-in-out focus:text-light-green motion-reduce:transition-none [&.active]:text-white"
-                                        href="#" >Contact</a>
-                                    </li>
-                                    <li className="">
-                                        <a className="text-font-16 lg:text-font-20 font-semibold text-light-green transition duration-200 hover:text-light-green hover:underline hover:ease-in-out focus:text-light-green motion-reduce:transition-none [&.active]:text-white"
-                                        href="#" >FAQ</a>
-                                    </li>
-                                    <li className="">
-                                        <a className="text-font-16 lg:text-font-20 font-semibold text-light-green transition duration-200 hover:text-light-green hover:underline hover:ease-in-out focus:text-light-green motion-reduce:transition-none [&.active]:text-white"
-                                        href="#" >This Week&lsquo;s Menu</a>
-                                    </li>
-                                    <hr className="my-2 h-[1px] !p-0 bg-gray-1 opacity-20 " />
-                                    <li className="mt-4">
-                                        <a className="text-font-16 lg:text-font-20 font-semibold text-light-green transition duration-200 hover:text-light-green hover:underline hover:ease-in-out focus:text-light-green motion-reduce:transition-none [&.active]:text-white"
-                                        href="#" >Sign in</a>
-                                    </li>
-                                    <li className="">
-                                        <a className="text-font-16 lg:text-font-20 font-semibold text-light-green transition duration-200 hover:text-light-green hover:underline hover:ease-in-out focus:text-light-green motion-reduce:transition-none [&.active]:text-white"
-                                        href="#" >Sign up</a>
-                                    </li>
-                                </ul>
-                            </nav>
-                        </div>
-                        <div className='mt-auto'>
+                    <div className="flex-grow flex flex-col p-4">
+                        <nav className="relative !h-[calc(100vh-150px)]" data-te-sidenav-init>
+                            <ul className="list-style-none flex flex-col pl-0 *:mb-1"
+                                data-te-sidenav-menu-ref>
+                                <li className="relative">
+                                    <a className="flex h-12 cursor-pointer items-center truncate rounded-[5px] px-6 py-4 text-font-18 lg:text-font-20 font-medium text-light-green outline-none transition duration-300 ease-linear hover:bg-white/5 hover:text-light-green hover:outline-none focus:bg-white/5 focus:text-light-green focus:outline-none active:bg-white/5 active:text-light-green active:outline-none data-[te-sidenav-state-active]:text-light-green data-[te-sidenav-state-focus]:outline-none motion-reduce:transition-none"
+                                        data-te-sidenav-link-ref>
+                                        <span>Order Now</span>
+                                    </a>
+                                </li>
+                                <li className="relative">
+                                    <a className="flex h-12 cursor-pointer items-center truncate rounded-[5px] px-6 py-4 text-font-18 lg:text-font-20 font-medium text-light-green outline-none transition duration-300 ease-linear hover:bg-white/5 hover:text-light-green hover:outline-none focus:bg-white/5 focus:text-light-green focus:outline-none active:bg-white/5 active:text-light-green active:outline-none data-[te-sidenav-state-active]:text-light-green data-[te-sidenav-state-focus]:outline-none motion-reduce:transition-none"
+                                        data-te-sidenav-link-ref>
+                                        <span>Salt Lake City  </span>
+                                        <span  className="absolute right-0 ml-auto mr-[0.8rem] transition-transform duration-300 ease-linear motion-reduce:transition-none [&>svg]:text-white/50"
+                                        data-te-sidenav-rotate-icon-ref>
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="h-5 w-5">
+                                            <path fillRule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clipRule="evenodd" />
+                                        </svg>
+                                        </span>
+                                    </a>
+                                    <ul className="!visible relative m-0 hidden list-none p-0 data-[te-collapse-show]:block " data-te-sidenav-collapse-ref>
+                                        <li className="relative">
+                                            <a className="flex h-12 cursor-pointer items-center truncate rounded-[5px] py-4 pl-11 pr-6 text-font-18 lg:text-font-20 font-medium text-light-green outline-none transition duration-300 ease-linear hover:bg-white/5 hover:text-light-green hover:outline-none focus:bg-white/5 focus:text-light-green focus:outline-none active:bg-white/5 active:text-light-green active:outline-none data-[te-sidenav-state-active]:text-light-green data-[te-sidenav-state-focus]:outline-none motion-reduce:transition-none"  data-te-sidenav-link-ref>St. George</a>
+                                        </li>
+                                        <li className="relative">
+                                            <a className="flex h-12 cursor-pointer items-center truncate rounded-[5px] py-4 pl-11 pr-6 text-font-18 lg:text-font-20 font-medium text-light-green outline-none transition duration-300 ease-linear hover:bg-white/5 hover:text-light-green hover:outline-none focus:bg-white/5 focus:text-light-green focus:outline-none active:bg-white/5 active:text-light-green active:outline-none data-[te-sidenav-state-active]:text-light-green data-[te-sidenav-state-focus]:outline-none motion-reduce:transition-none"  data-te-sidenav-link-ref>Draper</a>
+                                        </li>
+                                        <li className="relative">
+                                            <a className="flex h-12 cursor-pointer items-center truncate rounded-[5px] py-4 pl-11 pr-6 text-font-18 lg:text-font-20 font-medium text-light-green outline-none transition duration-300 ease-linear hover:bg-white/5 hover:text-light-green hover:outline-none focus:bg-white/5 focus:text-light-green focus:outline-none active:bg-white/5 active:text-light-green active:outline-none data-[te-sidenav-state-active]:text-light-green data-[te-sidenav-state-focus]:outline-none motion-reduce:transition-none"  data-te-sidenav-link-ref>Summerlin</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li className="relative">
+                                    <a className="flex h-12 cursor-pointer items-center truncate rounded-[5px] px-6 py-4 text-font-18 lg:text-font-20 font-medium text-light-green outline-none transition duration-300 ease-linear hover:bg-white/5 hover:text-light-green hover:outline-none focus:bg-white/5 focus:text-light-green focus:outline-none active:bg-white/5 active:text-light-green active:outline-none data-[te-sidenav-state-active]:text-light-green data-[te-sidenav-state-focus]:outline-none motion-reduce:transition-none"
+                                        data-te-sidenav-link-ref>
+                                        <span>Contact</span>
+                                    </a>
+                                </li>
+                                <li className="relative">
+                                    <a className="flex h-12 cursor-pointer items-center truncate rounded-[5px] px-6 py-4 text-font-18 lg:text-font-20 font-medium text-light-green outline-none transition duration-300 ease-linear hover:bg-white/5 hover:text-light-green hover:outline-none focus:bg-white/5 focus:text-light-green focus:outline-none active:bg-white/5 active:text-light-green active:outline-none data-[te-sidenav-state-active]:text-light-green data-[te-sidenav-state-focus]:outline-none motion-reduce:transition-none"
+                                        data-te-sidenav-link-ref>
+                                        <span>FAQ</span>
+                                    </a>
+                                </li>
+                                <li className="relative">
+                                    <a className="flex h-12 cursor-pointer items-center truncate rounded-[5px] px-6 py-4 text-font-18 lg:text-font-20 font-medium text-light-green outline-none transition duration-300 ease-linear hover:bg-white/5 hover:text-light-green hover:outline-none focus:bg-white/5 focus:text-light-green focus:outline-none active:bg-white/5 active:text-light-green active:outline-none data-[te-sidenav-state-active]:text-light-green data-[te-sidenav-state-focus]:outline-none motion-reduce:transition-none"
+                                        data-te-sidenav-link-ref>
+                                        <span>This Week&lsquo;s Menu</span>
+                                    </a>
+                                </li>
+                                <hr className="my-2 h-[1px] !p-0 bg-gray-1 opacity-20 " />
+                                <li className="relative mt-2">
+                                    <a className="flex h-12 cursor-pointer items-center truncate rounded-[5px] px-6 py-4 text-font-18 lg:text-font-20 font-medium text-light-green outline-none transition duration-300 ease-linear hover:bg-white/5 hover:text-light-green hover:outline-none focus:bg-white/5 focus:text-light-green focus:outline-none active:bg-white/5 active:text-light-green active:outline-none data-[te-sidenav-state-active]:text-light-green data-[te-sidenav-state-focus]:outline-none motion-reduce:transition-none"
+                                        data-te-sidenav-link-ref>
+                                        <span>Sign in</span>
+                                    </a>
+                                </li>
+                                <li className="relative">
+                                    <a className="flex h-12 cursor-pointer items-center truncate rounded-[5px] px-6 py-4 text-font-18 lg:text-font-20 font-medium text-light-green outline-none transition duration-300 ease-linear hover:bg-white/5 hover:text-light-green hover:outline-none focus:bg-white/5 focus:text-light-green focus:outline-none active:bg-white/5 active:text-light-green active:outline-none data-[te-sidenav-state-active]:text-light-green data-[te-sidenav-state-focus]:outline-none motion-reduce:transition-none"
+                                        data-te-sidenav-link-ref>
+                                        <span>Sign up</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                        <div className='mt-auto z-10'>
                             <a className="btn btn-green btn-md leading-none w-full py-3" href="#" data-te-nav-link-ref >Try us for free</a>
                         </div>
                     </div>
@@ -150,8 +182,8 @@ const Header = () => {
     </header>
 
     {/* Pause Program Start */}
-    <button type="button" data-te-ripple-init data-te-ripple-color="light" className="!fixed bottom-5 right-5 rounded-full bg-light-green p-3 hover:bg-lime-600 focus:bg-lime-600 focus:outline-none focus:ring-0 z-[999]" data-te-toggle="tooltip" title="Pause Program">
-        <svg className="w-[30px] h-[30px] fill-white" viewBox="0 0 320 512" xmlns="http://www.w3.org/2000/svg">
+    <button type="button" data-te-ripple-init data-te-ripple-color="light" className="!fixed bottom-14 lg:bottom-5 right-5 rounded-full bg-light-green p-2 lg:p-3 hover:bg-lime-600 focus:bg-lime-600 focus:outline-none focus:ring-0 z-[999]" data-te-toggle="tooltip" title="Pause Program">
+        <svg className="w-6 h-6 min-w-6 lg:w-[30px] lg:h-[30px] lg:min-w-[30px] fill-white" viewBox="0 0 320 512" xmlns="http://www.w3.org/2000/svg">
             <path d="M48 64C21.5 64 0 85.5 0 112V400c0 26.5 21.5 48 48 48H80c26.5 0 48-21.5 48-48V112c0-26.5-21.5-48-48-48H48zm192 0c-26.5 0-48 21.5-48 48V400c0 26.5 21.5 48 48 48h32c26.5 0 48-21.5 48-48V112c0-26.5-21.5-48-48-48H240z"></path>
             </svg>
     </button>
