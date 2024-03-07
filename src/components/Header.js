@@ -4,6 +4,7 @@ import { useEffect } from "react";
 import Image from 'next/image';
 import Logo from '../assets/images/logo.png';
 import MenuBar from '../assets/images/menu-bar.svg';
+import Link from 'next/link';
 
 const Header = () => {
     useEffect(() => {
@@ -21,11 +22,11 @@ const Header = () => {
         <nav className="flex-no-wrap relative flex w-full items-center justify-between lg:flex-wrap lg:justify-start ">
             <div className="flex w-full flex-wrap items-center justify-between ">
                 {/* <!-- Logo --> */}
-                <a href="#" className="flex flex-col lg:flex-row items-start lg:items-center">
+                <Link href="/" className="flex flex-col lg:flex-row items-start lg:items-center">
                     <Image src={Logo} className="w-auto h-12 lg:h-[60px] " alt="Fedup Logo" priority />
                     <span className='text-black text-font-14 lg:text-font-16 font-semibold lg:ml-3 lg:border-l lg:border-solid lg:border-black lg:pl-3 mt-0.5 lg:mt-0'>SLC - Sugarhouse</span>
-                </a>
-
+                </Link>
+                
                 {/* <!-- Desktop Main menu start --> */}
                 <div className="!visible hidden flex-grow basis-[100%] items-center lg:!flex lg:basis-auto" id="navbarSupportedContent1" data-te-collapse-item>
                     <div className="relative flex items-center ml-auto">

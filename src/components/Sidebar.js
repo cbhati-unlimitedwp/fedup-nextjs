@@ -4,8 +4,8 @@ import React, { useEffect, useState } from "react";
 const Sidebar = () => {
     useEffect(() => {
         const init = async () => {
-            const { Collapse, Dropdown, Offcanvas, Datepicker, Input, initTE } = await import("tw-elements");
-            initTE({ Collapse, Dropdown, Offcanvas, Datepicker, Input }); 
+            const { Collapse, Dropdown, Offcanvas, Datepicker, Input, Tooltip, initTE } = await import("tw-elements");
+            initTE({ Collapse, Dropdown, Offcanvas, Datepicker, Input, Tooltip }); 
         };
         
         init();
@@ -31,9 +31,9 @@ const Sidebar = () => {
     <>
 
 
-      <div className="right-sidebar w-full lg:w-[365px] max-lg:invisible max-lg:fixed max-lg:top-4 max-lg:bottom-0 max-lg:left-0 max-lg:right-0 max-lg:z-[1045] max-lg:flex max-lg:h-full max-lg:max-h-full max-lg:max-w-full max-lg:rounded-t-[20px] max-lg:translate-y-full max-lg:flex-col max-lg:border-none max-lg:bg-white max-lg:bg-clip-padding max-lg:outline-none max-lg:transition max-lg:duration-300 max-lg:ease-in-out max-lg:[&[data-te-offcanvas-show]]:transform-none max-lg:overflow-hidden" tabIndex="-1" id="offcanvasBottom" aria-labelledby="offcanvasBottomLabel" data-te-offcanvas-init>
+      <div className="right-sidebar w-full lg:w-[365px] max-lg:invisible max-lg:fixed max-lg:top-6 max-lg:bottom-0 max-lg:left-0 max-lg:right-0 max-lg:z-[1045] max-lg:flex max-lg:h-full max-lg:max-h-full max-lg:max-w-full max-lg:rounded-t-[20px] max-lg:translate-y-full max-lg:flex-col max-lg:border-none max-lg:bg-white max-lg:bg-clip-padding max-lg:outline-none max-lg:transition max-lg:duration-300 max-lg:ease-in-out max-lg:[&[data-te-offcanvas-show]]:transform-none max-lg:overflow-hidden" tabIndex="-1" id="offcanvasBottom" aria-labelledby="offcanvasBottomLabel" data-te-offcanvas-init>
        <div className="bg-white rounded-custom shadow-custom-1">
-          <div className="max-lg:mt-7 max-lg:flex-grow max-lg:overflow-y-auto max-lg:h-[calc(100vh-228px)]">
+          <div className="max-lg:mt-7 max-lg:flex-grow max-lg:overflow-y-auto max-lg:h-[calc(100vh-236px)]">
             <button  type="button" className="absolute right-5 top-2.5 box-content border-none opacity-70 hover:no-underline focus:outline-none bg-gray-1 rounded-full flex items-center justify-center w-6 min-w-6 h-6 z-10 lg:hidden" data-te-offcanvas-dismiss>
               <span className="w-5 focus:opacity-100 disabled:pointer-events-none disabled:select-none disabled:opacity-25 [&.disabled]:pointer-events-none [&.disabled]:select-none [&.disabled]:opacity-25">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none"
@@ -63,7 +63,7 @@ const Sidebar = () => {
             <div className='cart-summry max-h-[40vh] lg:max-h-[50vh] overflow-y-auto mt-4 px-5 border-'>
                 <ul>
                   <li className='flex items-start overflow-hidden py-1.5 border-b border-dashed border-gray-1 last:border-b-0'>
-                    <button type="button" data-te-ripple-init data-te-ripple-color="dark" className="flex items-center justify-center w-6 h-6 min-w-6 rounded-full bg-gray-200 p-1 uppercase leading-normal text-basecolor transition duration-150 ease-in-out hover:bg-gray-300 focus:bg-gray-300  focus:outline-none focus:ring-0">
+                    <button type="button" data-te-ripple-init data-te-ripple-color="dark" data-te-toggle="tooltip" title="Remove Item" className="flex items-center justify-center w-6 h-6 min-w-6 rounded-full bg-gray-200 p-1 uppercase leading-normal text-basecolor transition duration-150 ease-in-out hover:bg-gray-300 focus:bg-gray-300  focus:outline-none focus:ring-0">
                         <svg className="w-[14px] h-[14px] fill-basecolor" viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg">
                           <path d="M432 256c0 17.7-14.3 32-32 32L48 288c-17.7 0-32-14.3-32-32s14.3-32 32-32l352 0c17.7 0 32 14.3 32 32z"></path>
                         </svg>
@@ -79,7 +79,7 @@ const Sidebar = () => {
                     
                   </li>
                   <li className='flex items-start overflow-hidden py-1.5 border-b border-dashed border-gray-1 last:border-b-0'>
-                    <button type="button" data-te-ripple-init data-te-ripple-color="dark" className="flex items-center justify-center w-6 h-6 min-w-6 rounded-full bg-gray-200 p-1 uppercase leading-normal text-basecolor transition duration-150 ease-in-out hover:bg-gray-300 focus:bg-gray-300  focus:outline-none focus:ring-0">
+                    <button type="button" data-te-ripple-init data-te-ripple-color="dark" data-te-toggle="tooltip" title="Remove Item" className="flex items-center justify-center w-6 h-6 min-w-6 rounded-full bg-gray-200 p-1 uppercase leading-normal text-basecolor transition duration-150 ease-in-out hover:bg-gray-300 focus:bg-gray-300  focus:outline-none focus:ring-0">
                         <svg className="w-[16px] h-[16px] fill-basecolor" viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg">
                           <path d="M432 256c0 17.7-14.3 32-32 32L48 288c-17.7 0-32-14.3-32-32s14.3-32 32-32l352 0c17.7 0 32 14.3 32 32z"></path>
                         </svg>
@@ -95,7 +95,7 @@ const Sidebar = () => {
                     
                   </li>
                   <li className='flex items-start overflow-hidden py-1.5 border-b border-dashed border-gray-1 last:border-b-0'>
-                    <button type="button" data-te-ripple-init data-te-ripple-color="dark" className="flex items-center justify-center w-6 h-6 min-w-6 rounded-full bg-gray-200 p-1 uppercase leading-normal text-basecolor transition duration-150 ease-in-out hover:bg-gray-300 focus:bg-gray-300  focus:outline-none focus:ring-0">
+                    <button type="button" data-te-ripple-init data-te-ripple-color="dark" data-te-toggle="tooltip" title="Remove Item" className="flex items-center justify-center w-6 h-6 min-w-6 rounded-full bg-gray-200 p-1 uppercase leading-normal text-basecolor transition duration-150 ease-in-out hover:bg-gray-300 focus:bg-gray-300  focus:outline-none focus:ring-0">
                         <svg className="w-[16px] h-[16px] fill-basecolor" viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg">
                           <path d="M432 256c0 17.7-14.3 32-32 32L48 288c-17.7 0-32-14.3-32-32s14.3-32 32-32l352 0c17.7 0 32 14.3 32 32z"></path>
                         </svg>
@@ -117,7 +117,7 @@ const Sidebar = () => {
                     </div>
                   </li>
                   <li className='flex items-start overflow-hidden py-1.5 border-b border-dashed border-gray-1 last:border-b-0'>
-                    <button type="button" data-te-ripple-init data-te-ripple-color="dark" className="flex items-center justify-center w-6 h-6 min-w-6 rounded-full bg-gray-200 p-1 uppercase leading-normal text-basecolor transition duration-150 ease-in-out hover:bg-gray-300 focus:bg-gray-300  focus:outline-none focus:ring-0">
+                    <button type="button" data-te-ripple-init data-te-ripple-color="dark" data-te-toggle="tooltip" title="Remove Item" className="flex items-center justify-center w-6 h-6 min-w-6 rounded-full bg-gray-200 p-1 uppercase leading-normal text-basecolor transition duration-150 ease-in-out hover:bg-gray-300 focus:bg-gray-300  focus:outline-none focus:ring-0">
                         <svg className="w-[16px] h-[16px] fill-basecolor" viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg">
                           <path d="M432 256c0 17.7-14.3 32-32 32L48 288c-17.7 0-32-14.3-32-32s14.3-32 32-32l352 0c17.7 0 32 14.3 32 32z"></path>
                         </svg>
@@ -163,8 +163,8 @@ const Sidebar = () => {
 
             {/* Coupon Code Start */}
             <div className="relative p-5 flex flex-wrap items-stretch border-t border-b border-solid border-gray-1">
-              <input  type="text" className="relative m-0 -mr-0.5 block w-[1px] min-w-0 flex-auto rounded-l border border-solid border-gray-1 bg-transparent bg-clip-padding px-3 py-[0.25rem] text-font-16 font-normal leading-[1.6] text-neutral-700 outline-none transition duration-200 ease-in-out focus:z-[3] focus:border-primary focus:text-neutral-700 focus:shadow-[inset_0_0_0_1px_rgb(59,113,202)] focus:outline-none dark:border-neutral-600 dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:focus:border-primary" placeholder="Enter Coupon Code" aria-label="Enter Coupon Code" aria-describedby="button-addon2" />
-              <button className="z-[2] inline-block rounded-r bg-gray-200 hover:bg-gray-300 focus:bg-gray-300 active:bg-gray-300 px-2.5 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-basecolor transition duration-150 ease-in-out focus:z-[3] focus:bg-primary-600 focus:outline-none focus:ring-0"
+              <input  type="text" className="relative m-0 -mr-0.5 block w-[1px] min-w-0 flex-auto rounded-l border border-solid border-gray-1 bg-transparent bg-clip-padding px-3 py-[0.25rem] text-font-16 font-normal leading-[1.6] text-neutral-700 outline-none transition duration-200 ease-in-out focus:z-[3] focus:border-gray-400 focus:text-neutral-700 focus:outline-none" placeholder="Enter Coupon Code" aria-label="Enter Coupon Code" aria-describedby="button-addon2" />
+              <button className="z-[2] inline-block rounded-r bg-gray-1 hover:bg-gray-300 focus:bg-gray-300 active:bg-gray-300 px-2.5 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-basecolor transition duration-150 ease-in-out focus:z-[3] focus:bg-primary-600 focus:outline-none focus:ring-0"
               data-te-ripple-init  type="button"  id="button-addon2">
               <svg className="w-[16px] h-[16px] fill-basecolor" viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg">
                 <path d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"></path>

@@ -42,7 +42,7 @@ export default function Home() {
     <main className="bg-gray-3 py-7">
       <div className="container container-xl mx-auto">
         <div className="lg:flex">
-            <div className="left-content flex-1 lg:pr-[30px]">
+            <div className="left-content flex-1 lg:pr-[30px] pb-12 lg:pb-0">
               {/* Store location and detail start */}
               <div className="bg-white p-5 rounded-custom shadow-custom-1 grid grid-cols-1 lg:grid-cols-2 gap-[15px]">
                   <div className="flex">

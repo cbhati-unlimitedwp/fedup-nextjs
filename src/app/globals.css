@@ -1,9 +1,5 @@
-@import "../../node_modules/tw-elements/dist/css/tw-elements.min.css";
+/* @import "../../node_modules/tw-elements/dist/css/tw-elements.min.css"; */
 @tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-
 @layer base{
     html{
         @apply font-titilliumweb;
@@ -11,17 +7,17 @@
     body {
         @apply font-titilliumweb text-font-16 font-normal text-basecolor;
     }
-    h1, .h1{
-        @apply text-font-28 lg:text-font-36 xl:text-font-44 text-black font-bold;
+    h1, .h1{ 
+        @apply text-font-28 lg:text-font-38 xl:text-font-48 text-black font-bold;
     }
     h2, .h2{
         @apply text-font-24 lg:text-font-30 xl:text-font-38 text-black font-bold;
     }
     h3, .h3{
-        @apply text-font-20 lg:text-font-28 xl:text-font-34 text-black font-medium;
+        @apply text-font-20 lg:text-font-28 xl:text-font-34 text-black font-bold;
     }
     h4, .h4{
-        @apply text-font-18 lg:text-font-24 xl:text-font-26 text-black font-medium;
+        @apply text-font-18 lg:text-font-24 xl:text-font-26 text-black font-bold;
     }
     h5, .h5{
         @apply text-font-16 lg:text-font-20 xl:text-font-24 text-black font-bold;
@@ -44,7 +40,12 @@
     .btn-white{
         @apply bg-white border-gray-1 text-dark-1 hover:bg-gray-200 focus:bg-gray-200 active:bg-gray-200 hover:border-gray-1 focus:border-gray-1 active:border-gray-1;
     } 
+    .bg-check-icon{
+        @apply bg-[url('../assets/images/circle-check-white.svg')]
+    }
 }
+@tailwind components;
+@tailwind utilities;
 
 @media (min-width: 320px) and (max-width: 575px){
     .container {
@@ -79,7 +80,7 @@
     p, ul, li, ol, a:not(.btn), span{
         @apply text-font-16 leading-normal;
         > a:not(.btn){
-            @apply text-basecolor underline hover:text-basecolor/80;
+            @apply text-light-green underline hover:text-green-900;
         }
     }
     strong, b{
@@ -109,7 +110,7 @@
         }
     }
 	a:not(.btn){
-		@apply text-basecolor underline hover:text-basecolor/80;
+		@apply text-light-green underline hover:text-green-900;
 	}
     .btn {
         @apply mt-2.5;

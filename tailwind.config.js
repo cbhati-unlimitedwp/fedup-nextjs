@@ -119,5 +119,5 @@ module.exports = {
       'custom': '5px',
     }
   },
-  plugins: [],
+  plugins: [require("tw-elements/dist/plugin.cjs")],
 };
