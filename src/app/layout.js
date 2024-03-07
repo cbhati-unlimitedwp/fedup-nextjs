@@ -17,7 +17,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body id="root" className={'${titilliumweb.variable} flex h-full flex-col'} suppressHydrationWarning={true}>{children}</body>
+      <body id="root" className={titilliumweb.variable} suppressHydrationWarning={true}>{children}</body>
     </html>
   );
 }
