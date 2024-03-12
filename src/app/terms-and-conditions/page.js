@@ -24,7 +24,7 @@ export default function Home() {
   return (
     <>
     <Header />
-    <main className="bg-gray-3 pb-7">
+    <main className="bg-gray-5 pb-7">
       {/* Inner Page Header Start */}
       <div className="inner-page-section py-10 md:py-16 lg:py-28 bg-cover bg-center relative " style={fullBgImg}>
         <div className="container mx-auto relative z-[1]">

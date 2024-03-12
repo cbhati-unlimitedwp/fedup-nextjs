@@ -17,7 +17,7 @@ const Header = () => {
 
   return (
     <>
-    <header className="header bg-white py-4 shadow-[0_2px_5px_0_rgba(0,0,0,0.06)]">
+    <header className="header relative bg-white py-4 shadow-[0_2px_5px_0_rgba(0,0,0,0.06)]">
       <div className="container mx-auto">
         <nav className="flex-no-wrap relative flex w-full items-center justify-between lg:flex-wrap lg:justify-start ">
             <div className="flex w-full flex-wrap items-center justify-between ">

@@ -28,7 +28,7 @@ export default function Home() {
   return (
     <>
     <Header />
-    <main className="bg-gray-3">
+    <main className="bg-gray-5">
       <div className="login-page flex items-center justify-center bg-cover min-h-[calc(100vh-104px)] lg:min-h-[calc(100vh-197px)] bg-center relative after:content-[''] after:absolute after:top-0 after:left-0 after:w-full after:h-full after:bg-black/50" style={fullBgImg}>
         <div className="container container-xl mx-auto z-[1] relative flex items-center justify-center h-full py-12">
           <div className="max-w-96 lg:max-w-[1000px] mx-auto bg-white p-5 rounded-custom h-full w-full grid grid-cols-1 lg:grid-cols-2 gap-4">

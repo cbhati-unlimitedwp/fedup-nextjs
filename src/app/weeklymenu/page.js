@@ -42,7 +42,7 @@ export default function Home() {
   return (
     <>
     <Header />
-    <main className="bg-gray-3 py-7">
+    <main className="bg-gray-5 py-7">
       <div className="container container-xl mx-auto">
         <div className="lg:flex">
             <div className="left-content flex-1 lg:pr-[30px] pb-12 lg:pb-0">

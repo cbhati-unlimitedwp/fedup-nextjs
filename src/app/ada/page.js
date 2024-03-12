@@ -24,7 +24,7 @@ export default function Home() {
   return (
     <>
     <Header />
-    <main className="bg-gray-3 pb-7">
+    <main className="bg-gray-5 pb-7">
       {/* Inner Page Header Start */}
       <div className="inner-page-section py-10 md:py-16 lg:py-28 bg-cover bg-center relative " style={fullBgImg}>
         <div className="container mx-auto relative z-[1]">
@@ -48,7 +48,7 @@ export default function Home() {
 
               <p>For more information about the specific requirements outlined Section 504 and 508, <Link href="https://www.section508.gov/manage/laws-and-policies/" target="_blank">click here.</Link></p>
 
-              <hr class="my-7 h-0.5 border-t-0 bg-gray-1 " />
+              <hr className="my-7 h-0.5 border-t-0 bg-gray-1 " />
 
               <h2>Resources</h2>
               <h5>BrowseAloud</h5>
@@ -62,7 +62,7 @@ export default function Home() {
               <p>Text 2 Speech Converter is a free online service that can be accessed at any time for people who find it difficult to read online. Simply enter your text, select a voice and download, and listen to the mp3 file. Text 2 Speech Converter can help people with learning disabilities, English as a second language and mild visual impairments.</p>
 
               <p><Link href="https://www.text2speech.org/" target="_blank">Use Text 2 Speech Converter</Link></p>
-              <hr class="my-7 h-0.5 border-t-0 bg-gray-1 " />
+              <hr className="my-7 h-0.5 border-t-0 bg-gray-1 " />
               <h2>Learn More</h2>
               <h5>I can&apos;t see very well</h5>
               <p>Tips:</p>
@@ -95,7 +95,7 @@ export default function Home() {
                 <li><strong>Enable text transcripts</strong> <br />Enabling a text transcript on your device is useful because it’s the equivalent of audio information that includes spoken words and sound effects.</li>
               </ol>
 
-              <hr class="my-7 h-0.5 border-t-0 bg-gray-1 " />
+              <hr className="my-7 h-0.5 border-t-0 bg-gray-1 " />
 
               <h3>Questions?</h3>
               <p>If you have further questions or would like to voice a complaint, call us at 801-513-0619. Please include the website address or URL and the specific problem you experienced while trying to navigate our website.</p>

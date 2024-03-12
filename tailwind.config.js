@@ -12,12 +12,15 @@ module.exports = {
       colors: {
         primary: '#7ED32D',
         'light-green': '#7ED32D',
+        'extra-light-green': '#F1F8E9',
         basecolor: '#6D6461',
         'dark-1': '#333333',
         'dark-2': '#26272B',
         'gray-1' : '#E2E2E2',
         'gray-2' : '#CCC9C8',
-        'gray-3' : '#F5F5F5'
+        'gray-3' : '#F5F5F5',
+        'gray-4' : '#F4F1EA',
+        'gray-5' : '#fcfcfc'
       },
       boxShadow: {
         'custom-1': '0 0 4px 0 rgba(0, 0, 0, 0.05)',
